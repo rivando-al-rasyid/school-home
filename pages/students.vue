@@ -1,11 +1,11 @@
 <template>
   <div class="container mx-auto py-16 px-4">
-    <h1 class="text-4xl font-bold mb-8 text-center" data-aos="fade-down">Student Portal</h1>
+    <h1 class="text-4xl font-bold mb-8 text-center">Student Portal</h1>
     
     <div class="max-w-6xl mx-auto">
       <!-- Hero section -->
       <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
-        <div data-aos="fade-right" data-aos-delay="100">
+        <div>
           <h2 class="text-3xl font-bold mb-4">Empowering Student Success</h2>
           <p class="text-muted-foreground mb-6">
             Our platform provides everything students need to excel in their educational journey. From accessing assignments and tracking grades to communicating with teachers and exploring digital resources, we've designed our system with students at the center.
@@ -45,14 +45,14 @@
             </NuxtLink>
           </div>
         </div>
-        <div data-aos="fade-left" data-aos-delay="200">
+        <div>
           <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80" alt="Students studying" class="rounded-lg shadow-lg w-full h-auto" />
         </div>
       </div>
       
       <!-- Dashboard Preview -->
-      <div class="mb-16" data-aos="zoom-in" data-aos-delay="100">
-        <h2 class="text-3xl font-bold mb-8 text-center" data-aos="fade-up">Your Student Dashboard</h2>
+      <div class="mb-16">
+        <h2 class="text-3xl font-bold mb-8 text-center">Your Student Dashboard</h2>
         <div class="relative rounded-xl overflow-hidden shadow-xl">
           <img src="https://images.unsplash.com/photo-1587691592099-24045742c181?auto=format&fit=crop&q=80" alt="Student dashboard" class="w-full h-auto" />
           <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
@@ -68,9 +68,9 @@
       </div>
       
       <!-- Features grid -->
-      <h2 class="text-3xl font-bold mb-8 text-center" data-aos="fade-up">Key Features for Students</h2>
+      <h2 class="text-3xl font-bold mb-8 text-center">Key Features for Students</h2>
       <div class="grid md:grid-cols-3 gap-6 mb-16">
-        <Card class="shadow-sm" data-aos="fade-up" data-aos-delay="100">
+        <Card class="shadow-sm">
           <CardHeader>
             <div class="w-12 h-12 mb-4 bg-primary/10 text-primary rounded-full flex items-center justify-center">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
@@ -84,7 +84,7 @@
           </CardContent>
         </Card>
         
-        <Card class="shadow-sm" data-aos="fade-up" data-aos-delay="150">
+        <Card class="shadow-sm">
           <CardHeader>
             <div class="w-12 h-12 mb-4 bg-primary/10 text-primary rounded-full flex items-center justify-center">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clipboard-list"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M15 2H9a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1z"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/></svg>
@@ -98,7 +98,7 @@
           </CardContent>
         </Card>
         
-        <Card class="shadow-sm" data-aos="fade-up" data-aos-delay="200">
+        <Card class="shadow-sm">
           <CardHeader>
             <div class="w-12 h-12 mb-4 bg-primary/10 text-primary rounded-full flex items-center justify-center">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bar-chart-3"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
@@ -112,7 +112,7 @@
           </CardContent>
         </Card>
         
-        <Card class="shadow-sm" data-aos="fade-up" data-aos-delay="250">
+        <Card class="shadow-sm">
           <CardHeader>
             <div class="w-12 h-12 mb-4 bg-primary/10 text-primary rounded-full flex items-center justify-center">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar-days"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="M8 14h.01"/><path d="M12 14h.01"/><path d="M16 14h.01"/><path d="M8 18h.01"/><path d="M12 18h.01"/><path d="M16 18h.01"/></svg>
@@ -126,7 +126,7 @@
           </CardContent>
         </Card>
         
-        <Card class="shadow-sm" data-aos="fade-up" data-aos-delay="300">
+        <Card class="shadow-sm">
           <CardHeader>
             <div class="w-12 h-12 mb-4 bg-primary/10 text-primary rounded-full flex items-center justify-center">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-square"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
@@ -140,7 +140,7 @@
           </CardContent>
         </Card>
         
-        <Card class="shadow-sm" data-aos="fade-up" data-aos-delay="350">
+        <Card class="shadow-sm">
           <CardHeader>
             <div class="w-12 h-12 mb-4 bg-primary/10 text-primary rounded-full flex items-center justify-center">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-smartphone"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
@@ -157,10 +157,10 @@
       
       <!-- Testimonials -->
       <div class="mb-16">
-        <h2 class="text-3xl font-bold mb-8 text-center" data-aos="fade-up">What Students Say</h2>
+        <h2 class="text-3xl font-bold mb-8 text-center">What Students Say</h2>
         
         <div class="grid md:grid-cols-3 gap-6">
-          <Card class="shadow-sm" data-aos="fade-up" data-aos-delay="100">
+          <Card class="shadow-sm">
             <CardContent class="pt-6">
               <div class="flex items-center gap-4 mb-4">
                 <Avatar>
@@ -178,7 +178,7 @@
             </CardContent>
           </Card>
           
-          <Card class="shadow-sm" data-aos="fade-up" data-aos-delay="200">
+          <Card class="shadow-sm">
             <CardContent class="pt-6">
               <div class="flex items-center gap-4 mb-4">
                 <Avatar>
@@ -196,7 +196,7 @@
             </CardContent>
           </Card>
           
-          <Card class="shadow-sm" data-aos="fade-up" data-aos-delay="300">
+          <Card class="shadow-sm">
             <CardContent class="pt-6">
               <div class="flex items-center gap-4 mb-4">
                 <Avatar>
@@ -218,9 +218,9 @@
       
       <!-- Resources Section -->
       <div class="mb-16">
-        <h2 class="text-3xl font-bold mb-8 text-center" data-aos="fade-up">Student Resources</h2>
+        <h2 class="text-3xl font-bold mb-8 text-center">Student Resources</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div class="bg-muted rounded-lg p-6" data-aos="fade-right" data-aos-delay="100">
+          <div class="bg-muted rounded-lg p-6">
             <h3 class="text-xl font-bold mb-4">Study Guides & Tools</h3>
             <ul class="space-y-2">
               <li class="flex items-center">
@@ -254,7 +254,7 @@
             </ul>
           </div>
           
-          <div class="bg-muted rounded-lg p-6" data-aos="fade-left" data-aos-delay="200">
+          <div class="bg-muted rounded-lg p-6">
             <h3 class="text-xl font-bold mb-4">Academic Support</h3>
             <ul class="space-y-2">
               <li class="flex items-center">
@@ -291,7 +291,7 @@
       </div>
       
       <!-- Call to Action Section -->
-      <div class="bg-primary/5 rounded-lg p-8 my-16 text-center" data-aos="zoom-in">
+      <div class="bg-primary/5 rounded-lg p-8 my-16 text-center">
         <h2 class="text-3xl font-bold mb-4">Ready to Enhance Your Learning Experience?</h2>
         <p class="text-muted-foreground mb-6 max-w-2xl mx-auto">
           Join thousands of students who are already benefiting from our comprehensive educational tools and support system.

@@ -1,10 +1,10 @@
 <template>
   <div class="container mx-auto py-16 px-4">
-    <h1 class="text-4xl font-bold mb-8 text-center" data-aos="fade-down">Platform Features</h1>
+    <h1 class="text-4xl font-bold mb-8 text-center">Platform Features</h1>
     
     <div class="max-w-6xl mx-auto">
       <div class="grid md:grid-cols-3 gap-8 mb-16">
-        <Card class="shadow-md" data-aos="fade-up" data-aos-delay="100">
+        <Card class="shadow-md">
           <CardHeader>
             <CardTitle>For Students</CardTitle>
           </CardHeader>
@@ -25,7 +25,7 @@
           </CardFooter>
         </Card>
         
-        <Card class="shadow-md" data-aos="fade-up" data-aos-delay="200">
+        <Card class="shadow-md">
           <CardHeader>
             <CardTitle>For Teachers</CardTitle>
           </CardHeader>
@@ -46,7 +46,7 @@
           </CardFooter>
         </Card>
         
-        <Card class="shadow-md" data-aos="fade-up" data-aos-delay="300">
+        <Card class="shadow-md">
           <CardHeader>
             <CardTitle>For Parents</CardTitle>
           </CardHeader>
@@ -69,8 +69,8 @@
       </div>
       
       <div class="mb-16">
-        <h2 class="text-3xl font-bold mb-6 text-center" data-aos="fade-up">Advanced Platform Capabilities</h2>
-        <Accordion type="single" collapsible class="w-full" data-aos="fade-up" data-aos-delay="100">
+        <h2 class="text-3xl font-bold mb-6 text-center">Advanced Platform Capabilities</h2>
+        <Accordion type="single" collapsible class="w-full">
           <AccordionItem value="item-1">
             <AccordionTrigger>Real-time Data Synchronization</AccordionTrigger>
             <AccordionContent>
@@ -109,34 +109,34 @@
       </div>
       
       <div>
-        <h2 class="text-3xl font-bold mb-6 text-center" data-aos="fade-up">Integration Ecosystem</h2>
-        <p class="text-center text-muted-foreground mb-8" data-aos="fade-up" data-aos-delay="100">
+        <h2 class="text-3xl font-bold mb-6 text-center">Integration Ecosystem</h2>
+        <p class="text-center text-muted-foreground mb-8">
           Our platform seamlessly connects with popular educational tools and services
         </p>
         
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-          <div class="p-4 border rounded bg-card" data-aos="zoom-in" data-aos-delay="100">
+          <div class="p-4 border rounded bg-card">
             <h3 class="font-semibold">Google Classroom</h3>
           </div>
-          <div class="p-4 border rounded bg-card" data-aos="zoom-in" data-aos-delay="150">
+          <div class="p-4 border rounded bg-card">
             <h3 class="font-semibold">Microsoft Teams</h3>
           </div>
-          <div class="p-4 border rounded bg-card" data-aos="zoom-in" data-aos-delay="200">
+          <div class="p-4 border rounded bg-card">
             <h3 class="font-semibold">Canvas LMS</h3>
           </div>
-          <div class="p-4 border rounded bg-card" data-aos="zoom-in" data-aos-delay="250">
+          <div class="p-4 border rounded bg-card">
             <h3 class="font-semibold">Moodle</h3>
           </div>
-          <div class="p-4 border rounded bg-card" data-aos="zoom-in" data-aos-delay="300">
+          <div class="p-4 border rounded bg-card">
             <h3 class="font-semibold">Zoom</h3>
           </div>
-          <div class="p-4 border rounded bg-card" data-aos="zoom-in" data-aos-delay="350">
+          <div class="p-4 border rounded bg-card">
             <h3 class="font-semibold">Clever</h3>
           </div>
-          <div class="p-4 border rounded bg-card" data-aos="zoom-in" data-aos-delay="400">
+          <div class="p-4 border rounded bg-card">
             <h3 class="font-semibold">Khan Academy</h3>
           </div>
-          <div class="p-4 border rounded bg-card" data-aos="zoom-in" data-aos-delay="450">
+          <div class="p-4 border rounded bg-card">
             <h3 class="font-semibold">Blackboard</h3>
           </div>
         </div>

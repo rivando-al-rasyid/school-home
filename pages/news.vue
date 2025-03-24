@@ -1,12 +1,12 @@
 <template>
   <div class="container mx-auto py-16 px-4">
-    <h1 class="text-4xl font-bold mb-8 text-center" data-aos="fade-down">School News</h1>
+    <h1 class="text-4xl font-bold mb-8 text-center">School News</h1>
     
     <div class="max-w-6xl mx-auto">
 <!-- Featured News -->
 <div class="space-y-8 mb-16">
   <!-- Featured Article (Atas) -->
-  <div class="w-full" data-aos="zoom-in">
+  <div class="w-full">
     <div class="relative rounded-lg overflow-hidden shadow-lg">
       <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80" alt="Featured news" class="w-full h-80 object-cover" />
       <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
@@ -27,7 +27,7 @@
 
   <!-- Side News (Bawah) -->
   <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-    <Card class="overflow-hidden shadow-md hover:shadow-lg transition-shadow" data-aos="fade-right" data-aos-delay="100">
+    <Card class="overflow-hidden shadow-md hover:shadow-lg transition-shadow">
       <div class="relative h-40 overflow-hidden">
         <img src="https://images.unsplash.com/photo-1546519638-68e109acd27d?auto=format&fit=crop&q=80" alt="STEM Workshop" class="w-full h-full object-cover" />
         <div class="absolute top-3 left-3 bg-primary/90 text-white text-xs font-bold px-2 py-1 rounded">Academic</div>
@@ -45,7 +45,7 @@
       </CardContent>
     </Card>
 
-    <Card class="overflow-hidden shadow-md hover:shadow-lg transition-shadow" data-aos="fade-left" data-aos-delay="100">
+    <Card class="overflow-hidden shadow-md hover:shadow-lg transition-shadow">
       <div class="relative h-40 overflow-hidden">
         <img src="https://images.unsplash.com/photo-1594608661623-aa0bd3a69799?auto=format&fit=crop&q=80" alt="Sports Achievements" class="w-full h-full object-cover" />
         <div class="absolute top-3 left-3 bg-green-600 text-white text-xs font-bold px-2 py-1 rounded">Sports</div>
@@ -66,7 +66,7 @@
 </div>
 
 <!-- News Filter -->
-<div class="flex flex-col md:flex-row gap-4 items-center justify-between mb-10" data-aos="fade-up">
+<div class="flex flex-col md:flex-row gap-4 items-center justify-between mb-10">
   <div class="flex items-center gap-2">
     <Button variant="outline" class="bg-primary/10 text-primary">All News</Button>
     <Button variant="outline">Academic</Button>
@@ -88,7 +88,7 @@
       <!-- News Grid -->
       <div class="grid md:grid-cols-3 gap-6 mb-16">
         <!-- News 1 -->
-        <Card class="overflow-hidden shadow-md hover:shadow-lg transition-shadow" data-aos="fade-up" data-aos-delay="100">
+        <Card class="overflow-hidden shadow-md hover:shadow-lg transition-shadow">
           <div class="relative h-48 overflow-hidden">
             <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&q=80" alt="Curriculum Update" class="w-full h-full object-cover" />
             <div class="absolute top-3 left-3 bg-primary/90 text-white text-xs font-bold px-2 py-1 rounded">Academic</div>
@@ -109,7 +109,7 @@
         </Card>
         
         <!-- News 2 -->
-        <Card class="overflow-hidden shadow-md hover:shadow-lg transition-shadow" data-aos="fade-up" data-aos-delay="150">
+        <Card class="overflow-hidden shadow-md hover:shadow-lg transition-shadow">
           <div class="relative h-48 overflow-hidden">
             <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&q=80" alt="Parent Workshop" class="w-full h-full object-cover" />
             <div class="absolute top-3 left-3 bg-purple-600 text-white text-xs font-bold px-2 py-1 rounded">Community</div>
@@ -130,7 +130,7 @@
         </Card>
         
         <!-- News 3 -->
-        <Card class="overflow-hidden shadow-md hover:shadow-lg transition-shadow" data-aos="fade-up" data-aos-delay="200">
+        <Card class="overflow-hidden shadow-md hover:shadow-lg transition-shadow">
           <div class="relative h-48 overflow-hidden">
             <img src="https://images.unsplash.com/photo-1574283073530-b9b1a420758a?auto=format&fit=crop&q=80" alt="Art Exhibition" class="w-full h-full object-cover" />
             <div class="absolute top-3 left-3 bg-amber-500 text-white text-xs font-bold px-2 py-1 rounded">Arts</div>
@@ -151,7 +151,7 @@
         </Card>
         
         <!-- News 4 -->
-        <Card class="overflow-hidden shadow-md hover:shadow-lg transition-shadow" data-aos="fade-up" data-aos-delay="250">
+        <Card class="overflow-hidden shadow-md hover:shadow-lg transition-shadow">
           <div class="relative h-48 overflow-hidden">
             <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&q=80" alt="Robotics Competition" class="w-full h-full object-cover" />
             <div class="absolute top-3 left-3 bg-primary/90 text-white text-xs font-bold px-2 py-1 rounded">Academic</div>
@@ -172,7 +172,7 @@
         </Card>
         
         <!-- News 5 -->
-        <Card class="overflow-hidden shadow-md hover:shadow-lg transition-shadow" data-aos="fade-up" data-aos-delay="300">
+        <Card class="overflow-hidden shadow-md hover:shadow-lg transition-shadow">
           <div class="relative h-48 overflow-hidden">
             <img src="https://images.unsplash.com/photo-1551966775-a4ddc8df052b?auto=format&fit=crop&q=80" alt="School Renovation" class="w-full h-full object-cover" />
             <div class="absolute top-3 left-3 bg-purple-600 text-white text-xs font-bold px-2 py-1 rounded">Community</div>
@@ -193,7 +193,7 @@
         </Card>
         
         <!-- News 6 -->
-        <Card class="overflow-hidden shadow-md hover:shadow-lg transition-shadow" data-aos="fade-up" data-aos-delay="350">
+        <Card class="overflow-hidden shadow-md hover:shadow-lg transition-shadow">
           <div class="relative h-48 overflow-hidden">
             <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&q=80" alt="International Exchange" class="w-full h-full object-cover" />
             <div class="absolute top-3 left-3 bg-primary/90 text-white text-xs font-bold px-2 py-1 rounded">Academic</div>
@@ -215,7 +215,7 @@
       </div>
       
       <!-- Pagination -->
-      <div class="flex justify-center mb-16" data-aos="fade-up" data-aos-delay="100">
+      <div class="flex justify-center mb-16">
         <Button variant="outline" size="sm" disabled class="mr-2">
           <ChevronLeft size="16" class="mr-1" />
           Previous
@@ -230,7 +230,7 @@
       </div>
       
       <!-- Newsletter Section -->
-      <div class="bg-muted rounded-lg p-8 text-center mb-10" data-aos="zoom-in">
+      <div class="bg-muted rounded-lg p-8 text-center mb-10">
         <h2 class="text-2xl font-bold mb-4">Subscribe to Our Newsletter</h2>
         <p class="mb-6 max-w-2xl mx-auto text-muted-foreground">
           Stay informed about school news, events, and important announcements by subscribing to our weekly newsletter.

@@ -1,13 +1,13 @@
 <template>
   <div class="container mx-auto py-16 px-4">
-    <h1 class="text-4xl font-bold mb-8 text-center" data-aos="fade-down">School Management Blog</h1>
+    <h1 class="text-4xl font-bold mb-8 text-center">School Management Blog</h1>
     
     <div class="max-w-6xl mx-auto">
       <!-- Featured Article -->
-      <div class="mb-16" data-aos="zoom-in">
+      <div class="mb-16">
         <Card class="overflow-hidden">
           <div class="grid md:grid-cols-2 gap-0">
-            <div class="order-2 md:order-1" data-aos="fade-right" data-aos-delay="100">
+            <div class="order-2 md:order-1">
               <CardContent class="p-8">
                 <div class="text-sm text-muted-foreground mb-2">March 15, 2025</div>
                 <h2 class="text-3xl font-bold mb-4">Embracing Digital Transformation in Education</h2>
@@ -27,7 +27,7 @@
                 <Button>Read Full Article</Button>
               </CardContent>
             </div>
-            <div class="order-1 md:order-2" data-aos="fade-left" data-aos-delay="100">
+            <div class="order-1 md:order-2">
               <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1232&q=80" alt="Digital Education" class="w-full h-full object-cover" />
             </div>
           </div>
@@ -36,9 +36,7 @@
       
       <!-- Blog Grid -->
       <div class="grid md:grid-cols-3 gap-8 mb-16">
-        <Card v-for="(post, index) in blogPosts" :key="post.id" class="overflow-hidden" 
-          data-aos="fade-up" 
-          :data-aos-delay="100 + (index * 50)">
+        <Card v-for="(post, index) in blogPosts" :key="post.id" class="overflow-hidden">
           <div class="aspect-video overflow-hidden">
             <img :src="post.image" :alt="post.title" class="w-full h-full object-cover transition-transform hover:scale-105 duration-300" />
           </div>
@@ -59,22 +57,22 @@
       </div>
       
       <!-- Categories Section -->
-      <div class="mb-16" data-aos="fade-up">
+      <div class="mb-16">
         <h2 class="text-2xl font-bold mb-6 text-center">Browse by Category</h2>
         <div class="flex flex-wrap gap-3 justify-center">
-          <Badge variant="outline" class="px-4 py-2 text-base cursor-pointer hover:bg-muted" data-aos="zoom-in" data-aos-delay="100">Digital Learning</Badge>
-          <Badge variant="outline" class="px-4 py-2 text-base cursor-pointer hover:bg-muted" data-aos="zoom-in" data-aos-delay="150">School Administration</Badge>
-          <Badge variant="outline" class="px-4 py-2 text-base cursor-pointer hover:bg-muted" data-aos="zoom-in" data-aos-delay="200">Teaching Strategies</Badge>
-          <Badge variant="outline" class="px-4 py-2 text-base cursor-pointer hover:bg-muted" data-aos="zoom-in" data-aos-delay="250">Student Success</Badge>
-          <Badge variant="outline" class="px-4 py-2 text-base cursor-pointer hover:bg-muted" data-aos="zoom-in" data-aos-delay="300">Parent Engagement</Badge>
-          <Badge variant="outline" class="px-4 py-2 text-base cursor-pointer hover:bg-muted" data-aos="zoom-in" data-aos-delay="350">Technology Tips</Badge>
-          <Badge variant="outline" class="px-4 py-2 text-base cursor-pointer hover:bg-muted" data-aos="zoom-in" data-aos-delay="400">Educational Research</Badge>
-          <Badge variant="outline" class="px-4 py-2 text-base cursor-pointer hover:bg-muted" data-aos="zoom-in" data-aos-delay="450">Professional Development</Badge>
+          <Badge variant="outline" class="px-4 py-2 text-base cursor-pointer hover:bg-muted">Digital Learning</Badge>
+          <Badge variant="outline" class="px-4 py-2 text-base cursor-pointer hover:bg-muted">School Administration</Badge>
+          <Badge variant="outline" class="px-4 py-2 text-base cursor-pointer hover:bg-muted">Teaching Strategies</Badge>
+          <Badge variant="outline" class="px-4 py-2 text-base cursor-pointer hover:bg-muted">Student Success</Badge>
+          <Badge variant="outline" class="px-4 py-2 text-base cursor-pointer hover:bg-muted">Parent Engagement</Badge>
+          <Badge variant="outline" class="px-4 py-2 text-base cursor-pointer hover:bg-muted">Technology Tips</Badge>
+          <Badge variant="outline" class="px-4 py-2 text-base cursor-pointer hover:bg-muted">Educational Research</Badge>
+          <Badge variant="outline" class="px-4 py-2 text-base cursor-pointer hover:bg-muted">Professional Development</Badge>
         </div>
       </div>
       
       <!-- Newsletter -->
-      <div class="bg-muted p-8 rounded-lg" data-aos="zoom-in" data-aos-delay="100">
+      <div class="bg-muted p-8 rounded-lg">
         <div class="max-w-2xl mx-auto text-center">
           <h2 class="text-2xl font-bold mb-4">Subscribe to Our Newsletter</h2>
           <p class="text-muted-foreground mb-6">

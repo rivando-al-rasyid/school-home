@@ -1,11 +1,11 @@
 <template>
   <div class="container mx-auto py-16 px-4">
-    <h1 class="text-4xl font-bold mb-8 text-center" data-aos="fade-down">For Parents</h1>
+    <h1 class="text-4xl font-bold mb-8 text-center">For Parents</h1>
     
     <div class="max-w-6xl mx-auto">
       <!-- Hero section -->
       <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
-        <div data-aos="fade-right" data-aos-delay="100">
+        <div>
           <h2 class="text-3xl font-bold mb-4">Stay Connected to Your Child's Education</h2>
           <p class="text-muted-foreground mb-6">
             Our platform helps you stay involved in your child's educational journey. Monitor their progress, communicate with teachers, and stay informed about school activities all in one convenient place.
@@ -43,15 +43,15 @@
             <Button>Create Parent Account</Button>
           </NuxtLink>
         </div>
-        <div data-aos="fade-left" data-aos-delay="200">
+        <div>
           <img src="https://images.unsplash.com/photo-1591123120675-6f7f1aae0e5b?auto=format&fit=crop&q=80" alt="Parent and child with computer" class="rounded-lg shadow-lg w-full h-auto" />
         </div>
       </div>
       
       <!-- Features grid -->
-      <h2 class="text-3xl font-bold mb-8 text-center" data-aos="fade-up" data-aos-delay="100">Parent Portal Features</h2>
+      <h2 class="text-3xl font-bold mb-8 text-center">Parent Portal Features</h2>
       <div class="grid md:grid-cols-3 gap-6 mb-16">
-        <Card class="shadow-sm" data-aos="fade-up" data-aos-delay="150">
+        <Card class="shadow-sm">
           <CardHeader class="pb-2">
             <CardTitle class="text-xl">Academic Progress Monitoring</CardTitle>
           </CardHeader>
@@ -62,7 +62,7 @@
           </CardContent>
         </Card>
         
-        <Card class="shadow-sm" data-aos="fade-up" data-aos-delay="200">
+        <Card class="shadow-sm">
           <CardHeader class="pb-2">
             <CardTitle class="text-xl">Attendance Tracking</CardTitle>
           </CardHeader>
@@ -73,7 +73,7 @@
           </CardContent>
         </Card>
         
-        <Card class="shadow-sm" data-aos="fade-up" data-aos-delay="250">
+        <Card class="shadow-sm">
           <CardHeader class="pb-2">
             <CardTitle class="text-xl">Teacher Communication</CardTitle>
           </CardHeader>
@@ -84,7 +84,7 @@
           </CardContent>
         </Card>
         
-        <Card class="shadow-sm" data-aos="fade-up" data-aos-delay="300">
+        <Card class="shadow-sm">
           <CardHeader class="pb-2">
             <CardTitle class="text-xl">Calendar & Events</CardTitle>
           </CardHeader>
@@ -95,7 +95,7 @@
           </CardContent>
         </Card>
         
-        <Card class="shadow-sm" data-aos="fade-up" data-aos-delay="350">
+        <Card class="shadow-sm">
           <CardHeader class="pb-2">
             <CardTitle class="text-xl">Fee Management</CardTitle>
           </CardHeader>
@@ -106,7 +106,7 @@
           </CardContent>
         </Card>
         
-        <Card class="shadow-sm" data-aos="fade-up" data-aos-delay="400">
+        <Card class="shadow-sm">
           <CardHeader class="pb-2">
             <CardTitle class="text-xl">School Announcements</CardTitle>
           </CardHeader>
@@ -119,9 +119,9 @@
       </div>
       
       <!-- Testimonials -->
-      <h2 class="text-3xl font-bold mb-8 text-center" data-aos="fade-up">What Parents Say</h2>
+      <h2 class="text-3xl font-bold mb-8 text-center">What Parents Say</h2>
       <div class="grid md:grid-cols-3 gap-6 mb-16">
-        <Card class="shadow-sm" data-aos="fade-up" data-aos-delay="100">
+        <Card class="shadow-sm">
           <CardContent class="pt-6">
             <div class="flex items-center gap-4 mb-4">
               <Avatar>
@@ -139,7 +139,7 @@
           </CardContent>
         </Card>
         
-        <Card class="shadow-sm" data-aos="fade-up" data-aos-delay="200">
+        <Card class="shadow-sm">
           <CardContent class="pt-6">
             <div class="flex items-center gap-4 mb-4">
               <Avatar>
@@ -157,7 +157,7 @@
           </CardContent>
         </Card>
         
-        <Card class="shadow-sm" data-aos="fade-up" data-aos-delay="300">
+        <Card class="shadow-sm">
           <CardContent class="pt-6">
             <div class="flex items-center gap-4 mb-4">
               <Avatar>
@@ -177,7 +177,7 @@
       </div>
       
       <!-- CTA -->
-      <div class="text-center p-8 bg-muted rounded-lg" data-aos="zoom-in">
+      <div class="text-center p-8 bg-muted rounded-lg">
         <h2 class="text-2xl font-bold mb-4">Ready to get more involved in your child's education?</h2>
         <p class="text-muted-foreground mb-6 max-w-2xl mx-auto">
           Join thousands of parents who are using our platform to stay connected and support their children's academic journey.

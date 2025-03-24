@@ -1,11 +1,11 @@
 <template>
   <div class="container mx-auto py-16 px-4">
-    <h1 class="text-4xl font-bold mb-8 text-center" data-aos="fade-down">Contact Us</h1>
+    <h1 class="text-4xl font-bold mb-8 text-center">Contact Us</h1>
     
     <div class="max-w-6xl mx-auto">
       <div class="grid md:grid-cols-2 gap-12">
         <!-- Contact Information -->
-        <div data-aos="fade-right">
+        <div>
           <h2 class="text-2xl font-semibold mb-6">Contact Information</h2>
           <div class="space-y-6">
             <div class="flex items-start space-x-4">
@@ -51,8 +51,8 @@
           </div>
           
           <div class="mt-10">
-            <h3 class="text-xl font-semibold mb-4" data-aos="fade-up" data-aos-delay="300">Connect With Us</h3>
-            <div class="flex space-x-4" data-aos="fade-up" data-aos-delay="400">
+            <h3 class="text-xl font-semibold mb-4">Connect With Us</h3>
+            <div class="flex space-x-4">
               <Facebook size="20" class="text-primary hover:text-primary/80 transition-colors cursor-pointer" />
               <Twitter size="20" class="text-primary hover:text-primary/80 transition-colors cursor-pointer" />
               <Instagram size="20" class="text-primary hover:text-primary/80 transition-colors cursor-pointer" />
@@ -61,8 +61,8 @@
           </div>
           
           <div class="mt-10">
-            <h3 class="text-xl font-semibold mb-4" data-aos="fade-up" data-aos-delay="500">Frequently Asked Questions</h3>
-            <Accordion type="single" collapsible class="w-full" data-aos="fade-up" data-aos-delay="600">
+            <h3 class="text-xl font-semibold mb-4">Frequently Asked Questions</h3>
+            <Accordion type="single" collapsible class="w-full">
               <AccordionItem value="item-1">
                 <AccordionTrigger>How do I get started with the platform?</AccordionTrigger>
                 <AccordionContent>
@@ -89,7 +89,7 @@
         </div>
         
         <!-- Contact Form -->
-        <div data-aos="fade-left">
+        <div>
           <Card class="shadow-lg">
             <CardHeader>
               <CardTitle>Send Us a Message</CardTitle>
@@ -151,12 +151,12 @@
       </div>
       
       <!-- Map Section -->
-      <div class="mt-16" data-aos="fade-up" data-aos-delay="100">
-        <h2 class="text-2xl font-semibold mb-6 text-center" data-aos="fade-up">Our Location</h2>
-        <div class="aspect-video rounded-lg border overflow-hidden" data-aos="zoom-in" data-aos-delay="200">
+      <div class="mt-16">
+        <h2 class="text-2xl font-semibold mb-6 text-center">Our Location</h2>
+        <div class="aspect-video rounded-lg border overflow-hidden">
           <img src="https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/pin-l+4264fb(-122.4194,37.7749)/[-122.4194,37.7749,13]/800x400@2x?access_token=pk.example" alt="Office Location Map" class="w-full h-full object-cover" />
         </div>
-        <p class="text-center text-muted-foreground mt-4" data-aos="fade-up" data-aos-delay="300">
+        <p class="text-center text-muted-foreground mt-4">
           Our main office is conveniently located in downtown Learning City, with easy access to public transportation.
         </p>
       </div>

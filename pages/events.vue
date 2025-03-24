@@ -1,10 +1,10 @@
 <template>
   <div class="container mx-auto py-16 px-4">
-    <h1 class="text-4xl font-bold mb-8 text-center" data-aos="fade-down">School Events</h1>
+    <h1 class="text-4xl font-bold mb-8 text-center">School Events</h1>
     
     <div class="max-w-6xl mx-auto">
       <!-- Upcoming Events Hero -->
-      <div class="relative overflow-hidden rounded-lg mb-16" data-aos="zoom-in">
+      <div class="relative overflow-hidden rounded-lg mb-16">
         <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80" alt="School event" class="w-full h-64 md:h-96 object-cover" />
         <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
           <div class="p-6 text-white">
@@ -20,7 +20,7 @@
       </div>
       
       <!-- Events Filter -->
-      <div class="flex flex-col md:flex-row gap-4 items-center justify-between mb-10" data-aos="fade-up">
+      <div class="flex flex-col md:flex-row gap-4 items-center justify-between mb-10">
         <div class="flex items-center gap-2">
           <Button variant="outline" class="bg-primary/10 text-primary">All Events</Button>
           <Button variant="outline">Academic</Button>
@@ -42,7 +42,7 @@
       <!-- Events Grid -->
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
         <!-- Event 1 -->
-        <Card class="overflow-hidden shadow-md hover:shadow-lg transition-shadow" data-aos="fade-up" data-aos-delay="100">
+        <Card class="overflow-hidden shadow-md hover:shadow-lg transition-shadow">
           <div class="relative h-48 overflow-hidden">
             <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&q=80" alt="Parent-Teacher Conference" class="w-full h-full object-cover" />
             <div class="absolute top-3 left-3 bg-primary/90 text-white text-xs font-bold px-2 py-1 rounded">Academic</div>
@@ -70,7 +70,7 @@
         </Card>
         
         <!-- Event 2 -->
-        <Card class="overflow-hidden shadow-md hover:shadow-lg transition-shadow" data-aos="fade-up" data-aos-delay="150">
+        <Card class="overflow-hidden shadow-md hover:shadow-lg transition-shadow">
           <div class="relative h-48 overflow-hidden">
             <img src="https://images.unsplash.com/photo-1574279606130-09958dc756f7?auto=format&fit=crop&q=80" alt="Spring Concert" class="w-full h-full object-cover" />
             <div class="absolute top-3 left-3 bg-amber-500 text-white text-xs font-bold px-2 py-1 rounded">Arts</div>
@@ -98,7 +98,7 @@
         </Card>
         
         <!-- Event 3 -->
-        <Card class="overflow-hidden shadow-md hover:shadow-lg transition-shadow" data-aos="fade-up" data-aos-delay="200">
+        <Card class="overflow-hidden shadow-md hover:shadow-lg transition-shadow">
           <div class="relative h-48 overflow-hidden">
             <img src="https://images.unsplash.com/photo-1518091043644-c1d4457512c6?auto=format&fit=crop&q=80" alt="Basketball Tournament" class="w-full h-full object-cover" />
             <div class="absolute top-3 left-3 bg-green-600 text-white text-xs font-bold px-2 py-1 rounded">Sports</div>
@@ -126,7 +126,7 @@
         </Card>
         
         <!-- Event 4 -->
-        <Card class="overflow-hidden shadow-md hover:shadow-lg transition-shadow" data-aos="fade-up" data-aos-delay="250">
+        <Card class="overflow-hidden shadow-md hover:shadow-lg transition-shadow">
           <div class="relative h-48 overflow-hidden">
             <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80" alt="Career Day" class="w-full h-full object-cover" />
             <div class="absolute top-3 left-3 bg-primary/90 text-white text-xs font-bold px-2 py-1 rounded">Academic</div>
@@ -154,7 +154,7 @@
         </Card>
         
         <!-- Event 5 -->
-        <Card class="overflow-hidden shadow-md hover:shadow-lg transition-shadow" data-aos="fade-up" data-aos-delay="300">
+        <Card class="overflow-hidden shadow-md hover:shadow-lg transition-shadow">
           <div class="relative h-48 overflow-hidden">
             <img src="https://images.unsplash.com/photo-1551818255-e6e10975bc17?auto=format&fit=crop&q=80" alt="Charity Fundraiser" class="w-full h-full object-cover" />
             <div class="absolute top-3 left-3 bg-purple-600 text-white text-xs font-bold px-2 py-1 rounded">Community</div>
@@ -182,7 +182,7 @@
         </Card>
         
         <!-- Event 6 -->
-        <Card class="overflow-hidden shadow-md hover:shadow-lg transition-shadow" data-aos="fade-up" data-aos-delay="350">
+        <Card class="overflow-hidden shadow-md hover:shadow-lg transition-shadow">
           <div class="relative h-48 overflow-hidden">
             <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&q=80" alt="Graduation Ceremony" class="w-full h-full object-cover" />
             <div class="absolute top-3 left-3 bg-primary/90 text-white text-xs font-bold px-2 py-1 rounded">Academic</div>
@@ -211,7 +211,7 @@
       </div>
       
       <!-- Pagination -->
-      <div class="flex justify-center mb-16" data-aos="fade-up" data-aos-delay="100">
+      <div class="flex justify-center mb-16">
         <Button variant="outline" size="sm" disabled class="mr-2">
           <ChevronLeft size="16" class="mr-1" />
           Previous
@@ -308,7 +308,7 @@
       </div>
       
       <!-- Subscribe Section -->
-      <div class="bg-muted rounded-lg p-8 text-center mb-10" data-aos="zoom-in" data-aos-delay="150">
+      <div class="bg-muted rounded-lg p-8 text-center mb-10">
         <h2 class="text-2xl font-bold mb-4">Stay Updated</h2>
         <p class="mb-6 max-w-2xl mx-auto text-muted-foreground">
           Subscribe to our events newsletter to receive notifications about upcoming school events.
