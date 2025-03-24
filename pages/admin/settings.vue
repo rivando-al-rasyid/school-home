@@ -296,7 +296,7 @@
                 <div class="space-y-4">
                   <div class="grid gap-2">
                     <label class="text-sm font-medium">Default Role for New Users</label>
-                    <Select defaultValue="student">
+                    <Select default-value="student">
                       <SelectTrigger>
                         <SelectValue placeholder="Select default role" />
                       </SelectTrigger>
@@ -439,6 +439,364 @@
           </CardContent>
           <CardFooter class="flex justify-end">
             <Button>Save Notification Settings</Button>
+          </CardFooter>
+        </Card>
+        
+        <!-- Security Settings -->
+        <Card id="security" class="shadow-sm scroll-mt-6">
+          <CardHeader>
+            <CardTitle>Security Settings</CardTitle>
+            <CardDescription>Configure system security and authentication</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div class="space-y-6">
+              <div>
+                <h3 class="text-sm font-medium mb-3">Authentication</h3>
+                <div class="space-y-4">
+                  <div class="flex items-center justify-between">
+                    <div>
+                      <label class="text-sm font-medium">Two-Factor Authentication</label>
+                      <p class="text-xs text-muted-foreground">Require 2FA for admin users</p>
+                    </div>
+                    <Switch checked />
+                  </div>
+                  
+                  <div class="flex items-center justify-between">
+                    <div>
+                      <label class="text-sm font-medium">Single Sign-On (SSO)</label>
+                      <p class="text-xs text-muted-foreground">Enable SSO with Google, Microsoft, etc.</p>
+                    </div>
+                    <Switch checked />
+                  </div>
+                  
+                  <div class="grid gap-2">
+                    <label class="text-sm font-medium">Password Policy</label>
+                    <Select default-value="strong">
+                      <SelectTrigger>
+                        <SelectValue placeholder="Select password policy" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="basic">Basic (8+ characters)</SelectItem>
+                        <SelectItem value="medium">Medium (8+ chars, mixed case)</SelectItem>
+                        <SelectItem value="strong">Strong (8+ chars, mixed case, numbers)</SelectItem>
+                        <SelectItem value="very-strong">Very Strong (12+ chars, mixed case, numbers, symbols)</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="pt-4 border-t">
+                <h3 class="text-sm font-medium mb-3">Session Management</h3>
+                <div class="space-y-4">
+                  <div class="grid gap-2">
+                    <label class="text-sm font-medium">Session Timeout (minutes)</label>
+                    <Input type="number" value="30" min="5" max="120" />
+                  </div>
+                  
+                  <div class="flex items-center justify-between">
+                    <div>
+                      <label class="text-sm font-medium">Force logout after password change</label>
+                    </div>
+                    <Switch checked />
+                  </div>
+                  
+                  <div class="flex items-center justify-between">
+                    <div>
+                      <label class="text-sm font-medium">Maximum concurrent sessions</label>
+                    </div>
+                    <Input type="number" value="3" min="1" max="10" class="w-20" />
+                  </div>
+                </div>
+              </div>
+              
+              <div class="pt-4 border-t">
+                <h3 class="text-sm font-medium mb-3">IP Restrictions</h3>
+                <div class="space-y-2">
+                  <div class="flex items-center justify-between">
+                    <div>
+                      <label class="text-sm font-medium">Enable IP Whitelisting</label>
+                    </div>
+                    <Switch />
+                  </div>
+                  <Button variant="outline" size="sm">
+                    <Icon name="lucide:plus" class="h-4 w-4 mr-2" />
+                    Add IP Address
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </CardContent>
+          <CardFooter class="flex justify-end">
+            <Button>Save Security Settings</Button>
+          </CardFooter>
+        </Card>
+        
+        <!-- Integrations Settings -->
+        <Card id="integrations" class="shadow-sm scroll-mt-6">
+          <CardHeader>
+            <CardTitle>Integrations</CardTitle>
+            <CardDescription>Connect with external systems and services</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div class="space-y-6">
+              <div class="border rounded-md">
+                <div class="p-4 border-b flex justify-between items-center">
+                  <div class="flex items-center space-x-4">
+                    <div class="h-10 w-10 rounded-md bg-blue-100 flex items-center justify-center">
+                      <Icon name="lucide:mail" class="h-6 w-6 text-blue-600" />
+                    </div>
+                    <div>
+                      <h3 class="text-sm font-medium">Email Service</h3>
+                      <p class="text-xs text-muted-foreground">Connect to SMTP server for email notifications</p>
+                    </div>
+                  </div>
+                  <Switch checked />
+                </div>
+                <div class="p-4 space-y-2">
+                  <div class="grid gap-2">
+                    <label class="text-sm font-medium">SMTP Server</label>
+                    <Input value="smtp.schoolserver.edu" />
+                  </div>
+                  <div class="grid gap-2">
+                    <label class="text-sm font-medium">SMTP Port</label>
+                    <Input value="587" type="number" />
+                  </div>
+                  <div class="grid gap-2">
+                    <label class="text-sm font-medium">Email From</label>
+                    <Input value="no-reply@schoolhome.edu" />
+                  </div>
+                </div>
+              </div>
+              
+              <div class="border rounded-md">
+                <div class="p-4 border-b flex justify-between items-center">
+                  <div class="flex items-center space-x-4">
+                    <div class="h-10 w-10 rounded-md bg-green-100 flex items-center justify-center">
+                      <Icon name="lucide:calendar" class="h-6 w-6 text-green-600" />
+                    </div>
+                    <div>
+                      <h3 class="text-sm font-medium">Google Calendar</h3>
+                      <p class="text-xs text-muted-foreground">Sync school events with Google Calendar</p>
+                    </div>
+                  </div>
+                  <Switch />
+                </div>
+                <div class="p-4 space-y-2 opacity-50">
+                  <Button variant="outline" size="sm">
+                    <Icon name="lucide:key" class="h-4 w-4 mr-2" />
+                    Configure API Keys
+                  </Button>
+                </div>
+              </div>
+              
+              <div class="border rounded-md">
+                <div class="p-4 border-b flex justify-between items-center">
+                  <div class="flex items-center space-x-4">
+                    <div class="h-10 w-10 rounded-md bg-purple-100 flex items-center justify-center">
+                      <Icon name="lucide:message-square" class="h-6 w-6 text-purple-600" />
+                    </div>
+                    <div>
+                      <h3 class="text-sm font-medium">SMS Gateway</h3>
+                      <p class="text-xs text-muted-foreground">Connect to SMS service for text notifications</p>
+                    </div>
+                  </div>
+                  <Switch />
+                </div>
+                <div class="p-4 space-y-2 opacity-50">
+                  <Button variant="outline" size="sm">
+                    <Icon name="lucide:key" class="h-4 w-4 mr-2" />
+                    Configure SMS Provider
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </CardContent>
+          <CardFooter class="flex justify-end">
+            <Button>Save Integration Settings</Button>
+          </CardFooter>
+        </Card>
+        
+        <!-- Backup & Restore Settings -->
+        <Card id="backup" class="shadow-sm scroll-mt-6">
+          <CardHeader>
+            <CardTitle>Backup & Restore</CardTitle>
+            <CardDescription>Manage system backups and data restoration</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div class="space-y-6">
+              <div>
+                <h3 class="text-sm font-medium mb-3">Automated Backups</h3>
+                <div class="space-y-4">
+                  <div class="flex items-center justify-between">
+                    <div>
+                      <label class="text-sm font-medium">Enable Automated Backups</label>
+                    </div>
+                    <Switch checked />
+                  </div>
+                  
+                  <div class="grid gap-2">
+                    <label class="text-sm font-medium">Backup Frequency</label>
+                    <Select default-value="daily">
+                      <SelectTrigger>
+                        <SelectValue placeholder="Select backup frequency" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="hourly">Hourly</SelectItem>
+                        <SelectItem value="daily">Daily</SelectItem>
+                        <SelectItem value="weekly">Weekly</SelectItem>
+                        <SelectItem value="monthly">Monthly</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
+                  
+                  <div class="grid gap-2">
+                    <label class="text-sm font-medium">Retention Period (days)</label>
+                    <Input type="number" value="30" min="1" max="365" />
+                  </div>
+                </div>
+              </div>
+              
+              <div class="pt-4 border-t">
+                <h3 class="text-sm font-medium mb-3">Backup Location</h3>
+                <div class="space-y-4">
+                  <div class="flex items-center space-x-2">
+                    <input id="local" type="radio" name="backup-location" class="h-4 w-4" checked>
+                    <label for="local" class="text-sm">Local Server</label>
+                  </div>
+                  
+                  <div class="flex items-center space-x-2">
+                    <input id="cloud" type="radio" name="backup-location" class="h-4 w-4">
+                    <label for="cloud" class="text-sm">Cloud Storage</label>
+                  </div>
+                  
+                  <div class="flex items-center space-x-2">
+                    <input id="both" type="radio" name="backup-location" class="h-4 w-4">
+                    <label for="both" class="text-sm">Both Local and Cloud</label>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="pt-4 border-t">
+                <h3 class="text-sm font-medium mb-3">Manual Backup</h3>
+                <Button variant="outline">
+                  <Icon name="lucide:download" class="h-4 w-4 mr-2" />
+                  Create Backup Now
+                </Button>
+              </div>
+              
+              <div class="pt-4 border-t">
+                <h3 class="text-sm font-medium mb-3">Restore from Backup</h3>
+                <Button variant="outline">
+                  <Icon name="lucide:upload" class="h-4 w-4 mr-2" />
+                  Restore System
+                </Button>
+                <p class="text-xs text-muted-foreground mt-2">Warning: Restoring from backup will replace all current data.</p>
+              </div>
+            </div>
+          </CardContent>
+          <CardFooter class="flex justify-end">
+            <Button>Save Backup Settings</Button>
+          </CardFooter>
+        </Card>
+        
+        <!-- Advanced Settings -->
+        <Card id="advanced" class="shadow-sm scroll-mt-6">
+          <CardHeader>
+            <CardTitle>Advanced Settings</CardTitle>
+            <CardDescription>Configure system-level settings (use with caution)</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div class="space-y-6">
+              <div>
+                <h3 class="text-sm font-medium mb-3">System Performance</h3>
+                <div class="space-y-4">
+                  <div class="grid gap-2">
+                    <label class="text-sm font-medium">Cache Duration (minutes)</label>
+                    <Input type="number" value="60" min="0" max="1440" />
+                  </div>
+                  
+                  <div class="flex items-center justify-between">
+                    <div>
+                      <label class="text-sm font-medium">Enable Data Compression</label>
+                    </div>
+                    <Switch checked />
+                  </div>
+                </div>
+              </div>
+              
+              <div class="pt-4 border-t">
+                <h3 class="text-sm font-medium mb-3">Logs & Debugging</h3>
+                <div class="space-y-4">
+                  <div class="grid gap-2">
+                    <label class="text-sm font-medium">Log Level</label>
+                    <Select default-value="info">
+                      <SelectTrigger>
+                        <SelectValue placeholder="Select log level" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="error">Error Only</SelectItem>
+                        <SelectItem value="warn">Warning & Error</SelectItem>
+                        <SelectItem value="info">Info, Warning & Error</SelectItem>
+                        <SelectItem value="debug">Debug (Verbose)</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
+                  
+                  <div class="flex items-center justify-between">
+                    <div>
+                      <label class="text-sm font-medium">Detailed Performance Metrics</label>
+                    </div>
+                    <Switch />
+                  </div>
+                </div>
+              </div>
+              
+              <div class="pt-4 border-t">
+                <h3 class="text-sm font-medium mb-3">System Maintenance</h3>
+                <div class="space-y-4">
+                  <div class="flex items-center justify-between">
+                    <div>
+                      <label class="text-sm font-medium">Automatic Database Optimization</label>
+                    </div>
+                    <Switch checked />
+                  </div>
+                  
+                  <div class="grid gap-2">
+                    <label class="text-sm font-medium">Maintenance Window</label>
+                    <Select default-value="midnight">
+                      <SelectTrigger>
+                        <SelectValue placeholder="Select maintenance time" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="midnight">Midnight - 2 AM</SelectItem>
+                        <SelectItem value="early-morning">2 AM - 4 AM</SelectItem>
+                        <SelectItem value="weekend">Weekend Only</SelectItem>
+                        <SelectItem value="manual">Manual Only</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="pt-4 border-t">
+                <h3 class="text-sm font-medium mb-3 text-destructive">Danger Zone</h3>
+                <div class="space-y-4">
+                  <Button variant="destructive-outline" size="sm">
+                    <Icon name="lucide:trash" class="h-4 w-4 mr-2" />
+                    Clear All System Caches
+                  </Button>
+                  
+                  <Button variant="destructive-outline" size="sm">
+                    <Icon name="lucide:refresh-cw" class="h-4 w-4 mr-2" />
+                    Reset System Settings
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </CardContent>
+          <CardFooter class="flex justify-end">
+            <Button>Save Advanced Settings</Button>
           </CardFooter>
         </Card>
       </div>
