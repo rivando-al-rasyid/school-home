@@ -314,32 +314,32 @@
               <div class="pt-4 border-t">
                 <h3 class="text-sm font-medium mb-3">Permission Groups</h3>
                 <div class="space-y-4">
-                  <div class="flex items-center justify-between">
-                    <div>
-                      <label class="text-sm font-medium">Teachers can modify grades after submission</label>
-                    </div>
-                    <Switch checked />
+                  <div class="flex items-center space-x-2">
+                    <Checkbox id="modify-grades" checked />
+                    <label for="modify-grades" class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
+                      Teachers can modify grades after submission
+                    </label>
                   </div>
                   
-                  <div class="flex items-center justify-between">
-                    <div>
-                      <label class="text-sm font-medium">Admin approval for course creation</label>
-                    </div>
-                    <Switch checked />
+                  <div class="flex items-center space-x-2">
+                    <Checkbox id="create-courses" checked />
+                    <label for="create-courses" class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
+                      Teachers can create new courses
+                    </label>
                   </div>
                   
-                  <div class="flex items-center justify-between">
-                    <div>
-                      <label class="text-sm font-medium">Parents can view all child activities</label>
-                    </div>
-                    <Switch checked />
+                  <div class="flex items-center space-x-2">
+                    <Checkbox id="view-all-students" />
+                    <label for="view-all-students" class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
+                      Teachers can view all student profiles
+                    </label>
                   </div>
                   
-                  <div class="flex items-center justify-between">
-                    <div>
-                      <label class="text-sm font-medium">Staff can access financial reports</label>
-                    </div>
-                    <Switch />
+                  <div class="flex items-center space-x-2">
+                    <Checkbox id="admin-access" />
+                    <label for="admin-access" class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
+                      Parents can access financial records
+                    </label>
                   </div>
                 </div>
               </div>
@@ -406,32 +406,32 @@
               <div class="pt-4 border-t">
                 <h3 class="text-sm font-medium mb-3">Delivery Channels</h3>
                 <div class="space-y-4">
-                  <div class="flex items-center justify-between">
-                    <div>
-                      <label class="text-sm font-medium">Email Notifications</label>
-                    </div>
-                    <Switch checked />
+                  <div class="flex items-center space-x-2">
+                    <Checkbox id="email-notifications" checked />
+                    <label for="email-notifications" class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
+                      Email Notifications
+                    </label>
                   </div>
                   
-                  <div class="flex items-center justify-between">
-                    <div>
-                      <label class="text-sm font-medium">SMS Notifications</label>
-                    </div>
-                    <Switch />
+                  <div class="flex items-center space-x-2">
+                    <Checkbox id="sms-notifications" />
+                    <label for="sms-notifications" class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
+                      SMS Notifications
+                    </label>
                   </div>
                   
-                  <div class="flex items-center justify-between">
-                    <div>
-                      <label class="text-sm font-medium">In-App Notifications</label>
-                    </div>
-                    <Switch checked />
+                  <div class="flex items-center space-x-2">
+                    <Checkbox id="inapp-notifications" checked />
+                    <label for="inapp-notifications" class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
+                      In-App Notifications
+                    </label>
                   </div>
                   
-                  <div class="flex items-center justify-between">
-                    <div>
-                      <label class="text-sm font-medium">Browser Push Notifications</label>
-                    </div>
-                    <Switch />
+                  <div class="flex items-center space-x-2">
+                    <Checkbox id="push-notifications" />
+                    <label for="push-notifications" class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
+                      Browser Push Notifications
+                    </label>
                   </div>
                 </div>
               </div>
@@ -494,17 +494,15 @@
                     <Input type="number" value="30" min="5" max="120" />
                   </div>
                   
-                  <div class="flex items-center justify-between">
-                    <div>
-                      <label class="text-sm font-medium">Force logout after password change</label>
-                    </div>
-                    <Switch checked />
+                  <div class="flex items-center space-x-2">
+                    <Checkbox id="force-logout" checked />
+                    <label for="force-logout" class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
+                      Force logout after password change
+                    </label>
                   </div>
                   
-                  <div class="flex items-center justify-between">
-                    <div>
-                      <label class="text-sm font-medium">Maximum concurrent sessions</label>
-                    </div>
+                  <div class="grid gap-2">
+                    <label class="text-sm font-medium">Maximum concurrent sessions</label>
                     <Input type="number" value="3" min="1" max="10" class="w-20" />
                   </div>
                 </div>
@@ -513,11 +511,11 @@
               <div class="pt-4 border-t">
                 <h3 class="text-sm font-medium mb-3">IP Restrictions</h3>
                 <div class="space-y-2">
-                  <div class="flex items-center justify-between">
-                    <div>
-                      <label class="text-sm font-medium">Enable IP Whitelisting</label>
-                    </div>
-                    <Switch />
+                  <div class="flex items-center space-x-2">
+                    <Checkbox id="ip-whitelist" />
+                    <label for="ip-whitelist" class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
+                      Enable IP Whitelisting
+                    </label>
                   </div>
                   <Button variant="outline" size="sm">
                     <Icon name="lucide:plus" class="h-4 w-4 mr-2" />
@@ -551,7 +549,12 @@
                       <p class="text-xs text-muted-foreground">Connect to SMTP server for email notifications</p>
                     </div>
                   </div>
-                  <Switch checked />
+                  <div class="flex items-center space-x-2">
+                    <Checkbox id="enable-email" checked />
+                    <label for="enable-email" class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
+                      Enable
+                    </label>
+                  </div>
                 </div>
                 <div class="p-4 space-y-2">
                   <div class="grid gap-2">
@@ -793,6 +796,39 @@
                   </Button>
                 </div>
               </div>
+              
+              <div class="pt-4 border-t">
+                <h3 class="text-sm font-medium mb-3">Advanced System Configuration</h3>
+                <div class="space-y-4">
+                  <div class="flex items-center space-x-2">
+                    <Checkbox id="debug-mode" />
+                    <label for="debug-mode" class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
+                      Enable Debug Mode
+                    </label>
+                  </div>
+                  
+                  <div class="flex items-center space-x-2">
+                    <Checkbox id="maintenance-mode" />
+                    <label for="maintenance-mode" class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
+                      System Maintenance Mode
+                    </label>
+                  </div>
+                  
+                  <div class="flex items-center space-x-2">
+                    <Checkbox id="error-reporting" checked />
+                    <label for="error-reporting" class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
+                      Automatic Error Reporting
+                    </label>
+                  </div>
+                  
+                  <div class="flex items-center space-x-2">
+                    <Checkbox id="performance-logging" />
+                    <label for="performance-logging" class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
+                      Performance Monitoring
+                    </label>
+                  </div>
+                </div>
+              </div>
             </div>
           </CardContent>
           <CardFooter class="flex justify-end">
@@ -806,6 +842,11 @@
 
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue'
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import { Switch } from '@/components/ui/switch'
+import { Checkbox } from '@/components/ui/checkbox'
 
 definePageMeta({
   layout: 'admin'
