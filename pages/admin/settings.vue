@@ -9,41 +9,20 @@
         <Card class="shadow-sm sticky top-4">
           <CardContent class="p-0">
             <nav class="space-y-1">
-              <a href="#general" class="flex items-center px-4 py-2 text-sm font-medium text-primary border-l-2 border-primary">
-                <Icon name="lucide:settings" class="h-5 w-5 mr-3" />
-                General Settings
-              </a>
-              <a href="#school" class="flex items-center px-4 py-2 text-sm font-medium text-muted-foreground hover:text-primary border-l-2 border-transparent">
-                <Icon name="lucide:building" class="h-5 w-5 mr-3" />
-                School Information
-              </a>
-              <a href="#academic" class="flex items-center px-4 py-2 text-sm font-medium text-muted-foreground hover:text-primary border-l-2 border-transparent">
-                <Icon name="lucide:book" class="h-5 w-5 mr-3" />
-                Academic Settings
-              </a>
-              <a href="#users" class="flex items-center px-4 py-2 text-sm font-medium text-muted-foreground hover:text-primary border-l-2 border-transparent">
-                <Icon name="lucide:users" class="h-5 w-5 mr-3" />
-                User Permissions
-              </a>
-              <a href="#notifications" class="flex items-center px-4 py-2 text-sm font-medium text-muted-foreground hover:text-primary border-l-2 border-transparent">
-                <Icon name="lucide:bell" class="h-5 w-5 mr-3" />
-                Notifications
-              </a>
-              <a href="#security" class="flex items-center px-4 py-2 text-sm font-medium text-muted-foreground hover:text-primary border-l-2 border-transparent">
-                <Icon name="lucide:shield" class="h-5 w-5 mr-3" />
-                Security
-              </a>
-              <a href="#integrations" class="flex items-center px-4 py-2 text-sm font-medium text-muted-foreground hover:text-primary border-l-2 border-transparent">
-                <Icon name="lucide:plug" class="h-5 w-5 mr-3" />
-                Integrations
-              </a>
-              <a href="#backup" class="flex items-center px-4 py-2 text-sm font-medium text-muted-foreground hover:text-primary border-l-2 border-transparent">
-                <Icon name="lucide:database" class="h-5 w-5 mr-3" />
-                Backup & Restore
-              </a>
-              <a href="#advanced" class="flex items-center px-4 py-2 text-sm font-medium text-muted-foreground hover:text-primary border-l-2 border-transparent">
-                <Icon name="lucide:terminal" class="h-5 w-5 mr-3" />
-                Advanced
+              <a 
+                v-for="(item, index) in settingsNavItems" 
+                :key="index"
+                :href="`#${item.id}`"
+                :class="[
+                  'flex items-center px-4 py-2 text-sm font-medium border-l-2',
+                  activeSection === item.id 
+                    ? 'text-primary border-primary' 
+                    : 'text-muted-foreground hover:text-primary border-transparent'
+                ]"
+                @click="activeSection = item.id"
+              >
+                <Icon :name="item.icon" class="h-5 w-5 mr-3" />
+                {{ item.label }}
               </a>
             </nav>
           </CardContent>
@@ -304,17 +283,215 @@
           </CardFooter>
         </Card>
         
-        <!-- Showing just part of the settings for brevity -->
-        <div class="flex justify-center mt-8">
-          <Button variant="outline">Load More Settings Sections</Button>
-        </div>
+        <!-- User Permissions Settings -->
+        <Card id="users" class="shadow-sm scroll-mt-6">
+          <CardHeader>
+            <CardTitle>User Permissions</CardTitle>
+            <CardDescription>Configure access controls and user roles</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div class="space-y-6">
+              <div>
+                <h3 class="text-sm font-medium mb-3">Role Management</h3>
+                <div class="space-y-4">
+                  <div class="grid gap-2">
+                    <label class="text-sm font-medium">Default Role for New Users</label>
+                    <Select defaultValue="student">
+                      <SelectTrigger>
+                        <SelectValue placeholder="Select default role" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="student">Student</SelectItem>
+                        <SelectItem value="teacher">Teacher</SelectItem>
+                        <SelectItem value="parent">Parent</SelectItem>
+                        <SelectItem value="staff">Staff</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="pt-4 border-t">
+                <h3 class="text-sm font-medium mb-3">Permission Groups</h3>
+                <div class="space-y-4">
+                  <div class="flex items-center justify-between">
+                    <div>
+                      <label class="text-sm font-medium">Teachers can modify grades after submission</label>
+                    </div>
+                    <Switch checked />
+                  </div>
+                  
+                  <div class="flex items-center justify-between">
+                    <div>
+                      <label class="text-sm font-medium">Admin approval for course creation</label>
+                    </div>
+                    <Switch checked />
+                  </div>
+                  
+                  <div class="flex items-center justify-between">
+                    <div>
+                      <label class="text-sm font-medium">Parents can view all child activities</label>
+                    </div>
+                    <Switch checked />
+                  </div>
+                  
+                  <div class="flex items-center justify-between">
+                    <div>
+                      <label class="text-sm font-medium">Staff can access financial reports</label>
+                    </div>
+                    <Switch />
+                  </div>
+                </div>
+              </div>
+              
+              <div class="pt-4 border-t">
+                <h3 class="text-sm font-medium mb-3">Advanced Permissions</h3>
+                <Button variant="outline" size="sm">
+                  <Icon name="lucide:settings" class="h-4 w-4 mr-2" />
+                  Configure Custom Role Permissions
+                </Button>
+              </div>
+            </div>
+          </CardContent>
+          <CardFooter class="flex justify-end">
+            <Button>Save Permission Settings</Button>
+          </CardFooter>
+        </Card>
+        
+        <!-- Notification Settings -->
+        <Card id="notifications" class="shadow-sm scroll-mt-6">
+          <CardHeader>
+            <CardTitle>Notification Settings</CardTitle>
+            <CardDescription>Configure system and user notifications</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div class="space-y-6">
+              <div>
+                <h3 class="text-sm font-medium mb-3">System Notifications</h3>
+                <div class="space-y-4">
+                  <div class="flex items-center justify-between">
+                    <div>
+                      <label class="text-sm font-medium">Grade Updates</label>
+                      <p class="text-xs text-muted-foreground">Notify when grades are updated</p>
+                    </div>
+                    <Switch checked />
+                  </div>
+                  
+                  <div class="flex items-center justify-between">
+                    <div>
+                      <label class="text-sm font-medium">Attendance Alerts</label>
+                      <p class="text-xs text-muted-foreground">Alert for student absences</p>
+                    </div>
+                    <Switch checked />
+                  </div>
+                  
+                  <div class="flex items-center justify-between">
+                    <div>
+                      <label class="text-sm font-medium">System Maintenance</label>
+                      <p class="text-xs text-muted-foreground">Notify users about planned maintenance</p>
+                    </div>
+                    <Switch checked />
+                  </div>
+                  
+                  <div class="flex items-center justify-between">
+                    <div>
+                      <label class="text-sm font-medium">School Events</label>
+                      <p class="text-xs text-muted-foreground">Announcement for upcoming events</p>
+                    </div>
+                    <Switch checked />
+                  </div>
+                </div>
+              </div>
+              
+              <div class="pt-4 border-t">
+                <h3 class="text-sm font-medium mb-3">Delivery Channels</h3>
+                <div class="space-y-4">
+                  <div class="flex items-center justify-between">
+                    <div>
+                      <label class="text-sm font-medium">Email Notifications</label>
+                    </div>
+                    <Switch checked />
+                  </div>
+                  
+                  <div class="flex items-center justify-between">
+                    <div>
+                      <label class="text-sm font-medium">SMS Notifications</label>
+                    </div>
+                    <Switch />
+                  </div>
+                  
+                  <div class="flex items-center justify-between">
+                    <div>
+                      <label class="text-sm font-medium">In-App Notifications</label>
+                    </div>
+                    <Switch checked />
+                  </div>
+                  
+                  <div class="flex items-center justify-between">
+                    <div>
+                      <label class="text-sm font-medium">Browser Push Notifications</label>
+                    </div>
+                    <Switch />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </CardContent>
+          <CardFooter class="flex justify-end">
+            <Button>Save Notification Settings</Button>
+          </CardFooter>
+        </Card>
       </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
+import { ref, onMounted, onUnmounted } from 'vue'
+
 definePageMeta({
   layout: 'admin'
+})
+
+// Track the active section
+const activeSection = ref('general')
+
+// Settings navigation items
+const settingsNavItems = [
+  { id: 'general', icon: 'lucide:settings', label: 'General Settings' },
+  { id: 'school', icon: 'lucide:building', label: 'School Information' },
+  { id: 'academic', icon: 'lucide:book', label: 'Academic Settings' },
+  { id: 'users', icon: 'lucide:users', label: 'User Permissions' },
+  { id: 'notifications', icon: 'lucide:bell', label: 'Notifications' },
+  { id: 'security', icon: 'lucide:shield', label: 'Security' },
+  { id: 'integrations', icon: 'lucide:plug', label: 'Integrations' },
+  { id: 'backup', icon: 'lucide:database', label: 'Backup & Restore' },
+  { id: 'advanced', icon: 'lucide:terminal', label: 'Advanced' }
+]
+
+// Add a function to detect scroll and update active section
+function updateActiveSection() {
+  const sections = settingsNavItems.map(item => document.getElementById(item.id))
+  const scrollPosition = window.scrollY + 100 // Offset for better UX
+
+  for (let i = sections.length - 1; i >= 0; i--) {
+    const section = sections[i]
+    if (section && section.offsetTop <= scrollPosition) {
+      activeSection.value = settingsNavItems[i].id
+      break
+    }
+  }
+}
+
+// Add scroll listener when component mounts
+onMounted(() => {
+  window.addEventListener('scroll', updateActiveSection)
+  // Initialize active section
+  updateActiveSection()
+})
+
+// Remove listener when component unmounts
+onUnmounted(() => {
+  window.removeEventListener('scroll', updateActiveSection)
 })
 </script>
