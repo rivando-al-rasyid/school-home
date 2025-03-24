@@ -8,7 +8,7 @@
       <div class="flex items-center gap-2">
         <div class="relative">
           <Icon name="lucide:search" class="h-4 w-4 absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" />
-          <input type="text" placeholder="Search users..." class="pl-9 pr-4 py-2 rounded-md border text-sm focus:ring-2 focus:ring-primary focus:outline-none w-full sm:w-[300px]" />
+          <input type="text" placeholder="Search users..." class="pl-9 pr-4 py-2 rounded-md border text-sm focus:ring-2 focus:ring-primary focus:outline-none w-full sm:w-[300px]">
         </div>
         <div class="relative">
           <select class="pr-10 pl-3 py-2 rounded-md border text-sm appearance-none focus:ring-2 focus:ring-primary focus:outline-none">
@@ -60,7 +60,7 @@
                 <td class="p-4 text-sm">john.doe@example.com</td>
                 <td class="p-4 text-sm">Student</td>
                 <td class="p-4">
-                  <Badge variant="success">Active</Badge>
+                  <Badge variant="secondary" class="bg-green-100 text-green-800 hover:bg-green-200">Active</Badge>
                 </td>
                 <td class="p-4 text-sm">Today, 10:24 AM</td>
                 <td class="p-4 text-right">
@@ -91,7 +91,7 @@
                 <td class="p-4 text-sm">jane.smith@example.com</td>
                 <td class="p-4 text-sm">Teacher</td>
                 <td class="p-4">
-                  <Badge variant="success">Active</Badge>
+                  <Badge variant="secondary" class="bg-green-100 text-green-800 hover:bg-green-200">Active</Badge>
                 </td>
                 <td class="p-4 text-sm">Today, 9:15 AM</td>
                 <td class="p-4 text-right">
@@ -122,7 +122,7 @@
                 <td class="p-4 text-sm">robert.williams@example.com</td>
                 <td class="p-4 text-sm">Parent</td>
                 <td class="p-4">
-                  <Badge variant="success">Active</Badge>
+                  <Badge variant="secondary" class="bg-green-100 text-green-800 hover:bg-green-200">Active</Badge>
                 </td>
                 <td class="p-4 text-sm">Yesterday, 5:30 PM</td>
                 <td class="p-4 text-right">
@@ -184,7 +184,7 @@
                 <td class="p-4 text-sm">michael.lee@example.com</td>
                 <td class="p-4 text-sm">Administrator</td>
                 <td class="p-4">
-                  <Badge variant="success">Active</Badge>
+                  <Badge variant="secondary" class="bg-green-100 text-green-800 hover:bg-green-200">Active</Badge>
                 </td>
                 <td class="p-4 text-sm">Today, 8:00 AM</td>
                 <td class="p-4 text-right">

@@ -41,7 +41,7 @@
             <div class="space-y-4">
               <div>
                 <label class="block text-sm font-medium mb-1">School Name</label>
-                <input type="text" value="Cascade Academy" class="w-full px-3 py-2 rounded-md border text-sm focus:ring-2 focus:ring-primary focus:outline-none" />
+                <input type="text" value="Cascade Academy" class="w-full px-3 py-2 rounded-md border text-sm focus:ring-2 focus:ring-primary focus:outline-none">
               </div>
               
               <div>
@@ -128,39 +128,39 @@
                 <div class="flex-1 grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label class="block text-sm font-medium mb-1">School Full Name</label>
-                    <input type="text" value="Cascade Academy of Technology" class="w-full px-3 py-2 rounded-md border text-sm focus:ring-2 focus:ring-primary focus:outline-none" />
+                    <input type="text" value="Cascade Academy of Technology" class="w-full px-3 py-2 rounded-md border text-sm focus:ring-2 focus:ring-primary focus:outline-none">
                   </div>
                   
                   <div>
                     <label class="block text-sm font-medium mb-1">Short Name</label>
-                    <input type="text" value="Cascade Academy" class="w-full px-3 py-2 rounded-md border text-sm focus:ring-2 focus:ring-primary focus:outline-none" />
+                    <input type="text" value="Cascade Academy" class="w-full px-3 py-2 rounded-md border text-sm focus:ring-2 focus:ring-primary focus:outline-none">
                   </div>
                   
                   <div>
                     <label class="block text-sm font-medium mb-1">School Email</label>
-                    <input type="email" value="info@cascadeacademy.edu" class="w-full px-3 py-2 rounded-md border text-sm focus:ring-2 focus:ring-primary focus:outline-none" />
+                    <input type="email" value="info@cascadeacademy.edu" class="w-full px-3 py-2 rounded-md border text-sm focus:ring-2 focus:ring-primary focus:outline-none">
                   </div>
                   
                   <div>
                     <label class="block text-sm font-medium mb-1">Phone Number</label>
-                    <input type="tel" value="(555) 123-4567" class="w-full px-3 py-2 rounded-md border text-sm focus:ring-2 focus:ring-primary focus:outline-none" />
+                    <input type="tel" value="(555) 123-4567" class="w-full px-3 py-2 rounded-md border text-sm focus:ring-2 focus:ring-primary focus:outline-none">
                   </div>
                 </div>
               </div>
               
               <div>
                 <label class="block text-sm font-medium mb-1">School Address</label>
-                <input type="text" value="123 Education Avenue" class="w-full px-3 py-2 rounded-md border text-sm focus:ring-2 focus:ring-primary focus:outline-none mb-2" />
+                <input type="text" value="123 Education Avenue" class="w-full px-3 py-2 rounded-md border text-sm focus:ring-2 focus:ring-primary focus:outline-none mb-2">
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  <input type="text" value="Silicon Valley" placeholder="City" class="px-3 py-2 rounded-md border text-sm focus:ring-2 focus:ring-primary focus:outline-none" />
-                  <input type="text" value="CA" placeholder="State/Province" class="px-3 py-2 rounded-md border text-sm focus:ring-2 focus:ring-primary focus:outline-none" />
-                  <input type="text" value="94024" placeholder="Postal Code" class="px-3 py-2 rounded-md border text-sm focus:ring-2 focus:ring-primary focus:outline-none" />
+                  <input type="text" value="Silicon Valley" placeholder="City" class="px-3 py-2 rounded-md border text-sm focus:ring-2 focus:ring-primary focus:outline-none">
+                  <input type="text" value="CA" placeholder="State/Province" class="px-3 py-2 rounded-md border text-sm focus:ring-2 focus:ring-primary focus:outline-none">
+                  <input type="text" value="94024" placeholder="Postal Code" class="px-3 py-2 rounded-md border text-sm focus:ring-2 focus:ring-primary focus:outline-none">
                 </div>
               </div>
               
               <div>
                 <label class="block text-sm font-medium mb-1">School Website</label>
-                <input type="url" value="https://cascadeacademy.edu" class="w-full px-3 py-2 rounded-md border text-sm focus:ring-2 focus:ring-primary focus:outline-none" />
+                <input type="url" value="https://cascadeacademy.edu" class="w-full px-3 py-2 rounded-md border text-sm focus:ring-2 focus:ring-primary focus:outline-none">
               </div>
               
               <div>
@@ -188,36 +188,36 @@
                   <div>
                     <label class="block text-xs text-muted-foreground mb-1">A Range</label>
                     <div class="flex items-center">
-                      <input type="number" value="90" class="w-full px-3 py-2 rounded-l-md border text-sm focus:ring-2 focus:ring-primary focus:outline-none" />
+                      <input type="number" value="90" class="w-full px-3 py-2 rounded-l-md border text-sm focus:ring-2 focus:ring-primary focus:outline-none">
                       <span class="flex items-center justify-center h-[36px] px-3 border-y bg-muted">-</span>
-                      <input type="number" value="100" class="w-full px-3 py-2 rounded-r-md border text-sm focus:ring-2 focus:ring-primary focus:outline-none" />
+                      <input type="number" value="100" class="w-full px-3 py-2 rounded-r-md border text-sm focus:ring-2 focus:ring-primary focus:outline-none">
                     </div>
                   </div>
                   
                   <div>
                     <label class="block text-xs text-muted-foreground mb-1">B Range</label>
                     <div class="flex items-center">
-                      <input type="number" value="80" class="w-full px-3 py-2 rounded-l-md border text-sm focus:ring-2 focus:ring-primary focus:outline-none" />
+                      <input type="number" value="80" class="w-full px-3 py-2 rounded-l-md border text-sm focus:ring-2 focus:ring-primary focus:outline-none">
                       <span class="flex items-center justify-center h-[36px] px-3 border-y bg-muted">-</span>
-                      <input type="number" value="89" class="w-full px-3 py-2 rounded-r-md border text-sm focus:ring-2 focus:ring-primary focus:outline-none" />
+                      <input type="number" value="89" class="w-full px-3 py-2 rounded-r-md border text-sm focus:ring-2 focus:ring-primary focus:outline-none">
                     </div>
                   </div>
                   
                   <div>
                     <label class="block text-xs text-muted-foreground mb-1">C Range</label>
                     <div class="flex items-center">
-                      <input type="number" value="70" class="w-full px-3 py-2 rounded-l-md border text-sm focus:ring-2 focus:ring-primary focus:outline-none" />
+                      <input type="number" value="70" class="w-full px-3 py-2 rounded-l-md border text-sm focus:ring-2 focus:ring-primary focus:outline-none">
                       <span class="flex items-center justify-center h-[36px] px-3 border-y bg-muted">-</span>
-                      <input type="number" value="79" class="w-full px-3 py-2 rounded-r-md border text-sm focus:ring-2 focus:ring-primary focus:outline-none" />
+                      <input type="number" value="79" class="w-full px-3 py-2 rounded-r-md border text-sm focus:ring-2 focus:ring-primary focus:outline-none">
                     </div>
                   </div>
                   
                   <div>
                     <label class="block text-xs text-muted-foreground mb-1">D Range</label>
                     <div class="flex items-center">
-                      <input type="number" value="60" class="w-full px-3 py-2 rounded-l-md border text-sm focus:ring-2 focus:ring-primary focus:outline-none" />
+                      <input type="number" value="60" class="w-full px-3 py-2 rounded-l-md border text-sm focus:ring-2 focus:ring-primary focus:outline-none">
                       <span class="flex items-center justify-center h-[36px] px-3 border-y bg-muted">-</span>
-                      <input type="number" value="69" class="w-full px-3 py-2 rounded-r-md border text-sm focus:ring-2 focus:ring-primary focus:outline-none" />
+                      <input type="number" value="69" class="w-full px-3 py-2 rounded-r-md border text-sm focus:ring-2 focus:ring-primary focus:outline-none">
                     </div>
                   </div>
                 </div>
@@ -782,12 +782,12 @@
               <div class="pt-4 border-t">
                 <h3 class="text-sm font-medium mb-3 text-destructive">Danger Zone</h3>
                 <div class="space-y-4">
-                  <Button variant="destructive-outline" size="sm">
+                  <Button variant="outline" class="text-destructive border-destructive hover:bg-destructive/10" size="sm">
                     <Icon name="lucide:trash" class="h-4 w-4 mr-2" />
                     Clear All System Caches
                   </Button>
                   
-                  <Button variant="destructive-outline" size="sm">
+                  <Button variant="outline" class="text-destructive border-destructive hover:bg-destructive/10" size="sm">
                     <Icon name="lucide:refresh-cw" class="h-4 w-4 mr-2" />
                     Reset System Settings
                   </Button>
