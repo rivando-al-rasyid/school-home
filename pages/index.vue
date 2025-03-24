@@ -27,13 +27,13 @@
     <!-- Hero Content -->
     <div class="absolute inset-0 flex items-center justify-center text-center">
       <div class="max-w-3xl px-4">
-        <h1 class="mb-4 text-4xl font-bold text-white md:text-5xl lg:text-6xl">
+        <h1 class="mb-4 text-4xl font-bold text-white md:text-5xl lg:text-6xl" data-aos="fade-down">
           School Management System
         </h1>
-        <p class="mb-8 text-xl text-white md:text-2xl">
+        <p class="mb-8 text-xl text-white md:text-2xl" data-aos="fade-up" data-aos-delay="200">
           A comprehensive platform for students, teachers, and parents
         </p>
-        <div class="flex flex-col justify-center gap-4 sm:flex-row">
+        <div class="flex flex-col justify-center gap-4 sm:flex-row" data-aos="fade-up" data-aos-delay="400">
           <NuxtLink to="/register">
             <Button variant="default" size="lg">Get Started</Button>
           </NuxtLink>
@@ -50,12 +50,10 @@
     <div class="container px-4 mx-auto">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <!-- Upcoming Events -->
-        <Card>
+        <Card data-aos="fade-up" data-aos-delay="100">
           <CardHeader>
             <CardTitle class="flex items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-              </svg>
+              <Icon name="lucide:calendar" style="color: black" class="mr-2" />
               Upcoming Events
             </CardTitle>
           </CardHeader>
@@ -76,12 +74,10 @@
         </Card>
 
         <!-- Latest News -->
-        <Card>
+        <Card data-aos="fade-up" data-aos-delay="200">
           <CardHeader>
             <CardTitle class="flex items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
-              </svg>
+              <Icon name="lucide:file-text" style="color: black" class="mr-2" />
               Latest News
             </CardTitle>
           </CardHeader>
@@ -102,12 +98,10 @@
         </Card>
 
         <!-- Quick Links -->
-        <Card>
+        <Card data-aos="fade-up" data-aos-delay="300">
           <CardHeader>
             <CardTitle class="flex items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
-              </svg>
+              <Icon name="lucide:link" style="color: black" class="mr-2" />
               Quick Links
             </CardTitle>
           </CardHeader>
@@ -141,7 +135,7 @@
     <h2 class="text-3xl font-bold text-center mb-10">Discover Our Platform</h2>
     
     <div class="grid md:grid-cols-2 gap-8 mb-12">
-      <div>
+      <div data-aos="fade-right">
         <NuxtLink to="/features">
           <Card class="overflow-hidden h-full hover:shadow-lg transition-shadow">
             <div class="aspect-video">
@@ -162,7 +156,7 @@
         </NuxtLink>
       </div>
       
-      <div>
+      <div data-aos="fade-left">
         <NuxtLink to="/about">
           <Card class="overflow-hidden h-full hover:shadow-lg transition-shadow">
             <div class="aspect-video">
@@ -185,7 +179,7 @@
     </div>
     
     <div class="grid md:grid-cols-3 gap-8">
-      <div>
+      <div data-aos="fade-up" data-aos-delay="100">
         <NuxtLink to="/students">
           <Card class="overflow-hidden h-full hover:shadow-lg transition-shadow">
             <div class="aspect-video">
@@ -199,7 +193,7 @@
         </NuxtLink>
       </div>
       
-      <div>
+      <div data-aos="fade-up" data-aos-delay="200">
         <NuxtLink to="/teachers">
           <Card class="overflow-hidden h-full hover:shadow-lg transition-shadow">
             <div class="aspect-video">
@@ -213,7 +207,7 @@
         </NuxtLink>
       </div>
       
-      <div>
+      <div data-aos="fade-up" data-aos-delay="300">
         <NuxtLink to="/parents">
           <Card class="overflow-hidden h-full hover:shadow-lg transition-shadow">
             <div class="aspect-video">
@@ -234,7 +228,7 @@
     <h2 class="text-3xl font-bold text-center mb-10">Get Started Today</h2>
     
     <div class="grid md:grid-cols-2 gap-8">
-      <div>
+      <div data-aos="fade-right">
         <Card class="overflow-hidden h-full hover:shadow-lg transition-shadow">
           <div class="aspect-video">
             <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Sign Up" class="w-full h-full object-cover" />
@@ -251,7 +245,7 @@
         </Card>
       </div>
       
-      <div>
+      <div data-aos="fade-left">
         <Card class="overflow-hidden h-full hover:shadow-lg transition-shadow">
           <div class="aspect-video">
             <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Login" class="w-full h-full object-cover" />

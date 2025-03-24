@@ -16,11 +16,7 @@
         <Card class="text-center shadow-sm hover:shadow-md transition-shadow">
           <CardContent class="pt-6">
             <div class="w-16 h-16 bg-primary/10 text-primary rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10"></circle>
-                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
-                <line x1="12" y1="17" x2="12.01" y2="17"></line>
-              </svg>
+              <NuxtIcon name="lucide:life-buoy" size="24" />
             </div>
             <h3 class="text-xl font-bold mb-2">FAQs</h3>
             <p class="text-muted-foreground mb-4">
@@ -35,10 +31,7 @@
         <Card class="text-center shadow-sm hover:shadow-md transition-shadow">
           <CardContent class="pt-6">
             <div class="w-16 h-16 bg-primary/10 text-primary rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polygon points="23 7 16 12 23 17 23 7"></polygon>
-                <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
-              </svg>
+              <NuxtIcon name="lucide:message-circle" size="24" />
             </div>
             <h3 class="text-xl font-bold mb-2">Video Guides</h3>
             <p class="text-muted-foreground mb-4">
@@ -53,9 +46,7 @@
         <Card class="text-center shadow-sm hover:shadow-md transition-shadow">
           <CardContent class="pt-6">
             <div class="w-16 h-16 bg-primary/10 text-primary rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-              </svg>
+              <NuxtIcon name="lucide:mail" size="24" />
             </div>
             <h3 class="text-xl font-bold mb-2">Live Chat</h3>
             <p class="text-muted-foreground mb-4">
@@ -75,7 +66,7 @@
             usually within 24 hours on business days.
           </p>
           
-          <form @submit.prevent="handleSubmit" class="space-y-4">
+          <form class="space-y-4" @submit.prevent="handleSubmit">
             <div>
               <Label for="name">Full Name</Label>
               <Input id="name" v-model="formData.name" type="text" placeholder="Your name" required />
@@ -154,16 +145,11 @@
               <h3 class="text-xl font-semibold mb-2">Contact Information</h3>
               <div class="space-y-3">
                 <div class="flex items-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2 text-primary">
-                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                  </svg>
+                  <NuxtIcon name="lucide:phone" class="mr-2 text-primary" size="20" />
                   <span>1-800-123-4567</span>
                 </div>
                 <div class="flex items-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2 text-primary">
-                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                    <polyline points="22,6 12,13 2,6"></polyline>
-                  </svg>
+                  <NuxtIcon name="lucide:mail" class="mr-2 text-primary" size="20" />
                   <span>support@schoolsystem.edu</span>
                 </div>
               </div>
@@ -175,10 +161,7 @@
                 For urgent matters that require immediate attention outside of normal business hours:
               </p>
               <div class="flex items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2 text-primary">
-                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                  <polyline points="22,6 12,13 2,6"></polyline>
-                </svg>
+                <NuxtIcon name="lucide:mail" class="mr-2 text-primary" size="20" />
                 <span>emergency@schoolsystem.edu</span>
               </div>
             </div>
@@ -189,9 +172,7 @@
               <details class="group mb-3">
                 <summary class="flex cursor-pointer items-center justify-between rounded-lg bg-muted p-4">
                   <span class="font-medium">What is the average response time?</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition duration-300 group-open:rotate-180">
-                    <polyline points="6 9 12 15 18 9"></polyline>
-                  </svg>
+                  <NuxtIcon name="lucide:chevron-down" class="transition duration-300 group-open:rotate-180" size="24" />
                 </summary>
                 <div class="px-4 pt-2 pb-4 text-muted-foreground">
                   <p>During business hours, our average response time is under 2 hours. For inquiries submitted outside business hours, you can expect a response the next business day.</p>
@@ -201,9 +182,7 @@
               <details class="group">
                 <summary class="flex cursor-pointer items-center justify-between rounded-lg bg-muted p-4">
                   <span class="font-medium">Do you offer phone support?</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition duration-300 group-open:rotate-180">
-                    <polyline points="6 9 12 15 18 9"></polyline>
-                  </svg>
+                  <NuxtIcon name="lucide:chevron-down" class="transition duration-300 group-open:rotate-180" size="24" />
                 </summary>
                 <div class="px-4 pt-2 pb-4 text-muted-foreground">
                   <p>Yes, phone support is available during our business hours. For complex issues, we recommend submitting a support ticket first so our team can gather necessary information before the call.</p>
@@ -222,10 +201,7 @@
           <Card class="shadow-sm hover:shadow-md transition-shadow cursor-pointer">
             <CardContent class="pt-6">
               <div class="w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
-                  <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
-                </svg>
+                <NuxtIcon name="lucide:headset" size="24" />
               </div>
               <h3 class="text-center font-semibold mb-2">Knowledge Base</h3>
               <p class="text-center text-sm text-muted-foreground">
@@ -237,10 +213,7 @@
           <Card class="shadow-sm hover:shadow-md transition-shadow cursor-pointer">
             <CardContent class="pt-6">
               <div class="w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path>
-                  <polyline points="14 2 14 8 20 8"></polyline>
-                </svg>
+                <NuxtIcon name="lucide:phone" size="24" />
               </div>
               <h3 class="text-center font-semibold mb-2">Documentation</h3>
               <p class="text-center text-sm text-muted-foreground">
@@ -252,9 +225,7 @@
           <Card class="shadow-sm hover:shadow-md transition-shadow cursor-pointer">
             <CardContent class="pt-6">
               <div class="w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
-                </svg>
+                <NuxtIcon name="lucide:message-square" size="24" />
               </div>
               <h3 class="text-center font-semibold mb-2">Community Forum</h3>
               <p class="text-center text-sm text-muted-foreground">
@@ -266,11 +237,7 @@
           <Card class="shadow-sm hover:shadow-md transition-shadow cursor-pointer">
             <CardContent class="pt-6">
               <div class="w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                  <line x1="8" y1="21" x2="16" y2="21"></line>
-                  <line x1="12" y1="17" x2="12" y2="21"></line>
-                </svg>
+                <NuxtIcon name="lucide:mail" size="24" />
               </div>
               <h3 class="text-center font-semibold mb-2">Webinars</h3>
               <p class="text-center text-sm text-muted-foreground">

@@ -115,30 +115,38 @@
         </p>
         
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-          <div class="p-4 border rounded bg-card">
+          <Card class="p-4 hover:bg-accent transition-colors">
             <h3 class="font-semibold">Google Classroom</h3>
-          </div>
-          <div class="p-4 border rounded bg-card">
+            <p class="text-sm text-muted-foreground mt-1">Assignment integration</p>
+          </Card>
+          <Card class="p-4 hover:bg-accent transition-colors">
             <h3 class="font-semibold">Microsoft Teams</h3>
-          </div>
-          <div class="p-4 border rounded bg-card">
+            <p class="text-sm text-muted-foreground mt-1">Virtual classrooms</p>
+          </Card>
+          <Card class="p-4 hover:bg-accent transition-colors">
             <h3 class="font-semibold">Canvas LMS</h3>
-          </div>
-          <div class="p-4 border rounded bg-card">
+            <p class="text-sm text-muted-foreground mt-1">Course management</p>
+          </Card>
+          <Card class="p-4 hover:bg-accent transition-colors">
             <h3 class="font-semibold">Moodle</h3>
-          </div>
-          <div class="p-4 border rounded bg-card">
+            <p class="text-sm text-muted-foreground mt-1">Learning resources</p>
+          </Card>
+          <Card class="p-4 hover:bg-accent transition-colors">
             <h3 class="font-semibold">Zoom</h3>
-          </div>
-          <div class="p-4 border rounded bg-card">
+            <p class="text-sm text-muted-foreground mt-1">Video conferencing</p>
+          </Card>
+          <Card class="p-4 hover:bg-accent transition-colors">
             <h3 class="font-semibold">Clever</h3>
-          </div>
-          <div class="p-4 border rounded bg-card">
+            <p class="text-sm text-muted-foreground mt-1">Single sign-on</p>
+          </Card>
+          <Card class="p-4 hover:bg-accent transition-colors">
             <h3 class="font-semibold">Khan Academy</h3>
-          </div>
-          <div class="p-4 border rounded bg-card">
+            <p class="text-sm text-muted-foreground mt-1">Learning content</p>
+          </Card>
+          <Card class="p-4 hover:bg-accent transition-colors">
             <h3 class="font-semibold">Blackboard</h3>
-          </div>
+            <p class="text-sm text-muted-foreground mt-1">Assessment tools</p>
+          </Card>
         </div>
       </div>
     </div>

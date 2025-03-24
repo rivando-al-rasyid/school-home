@@ -271,9 +271,3 @@
   </div>
 </template>
 
-<script setup>
-import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { Search, Users, HelpCircle, Eye, Clock, Video, Play, ChevronDown } from 'lucide-vue-next';
-</script>

@@ -5,17 +5,15 @@
     <div class="max-w-3xl mx-auto">
       <!-- Search Section -->
       <div class="mb-10">
-        <div class="relative">
+        <div class="relative mb-8">
           <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search text-muted-foreground">
-              <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
-            </svg>
+            <NuxtIcon name="lucide:search" size="20" class="text-muted-foreground" />
           </div>
           <Input 
+            v-model="searchQuery"
             type="search" 
             placeholder="Search frequently asked questions..." 
             class="pl-10"
-            v-model="searchQuery"
           />
         </div>
       </div>
@@ -121,6 +119,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '@/components/ui/accordion';
+
 
 const searchQuery = ref('');
 

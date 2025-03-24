@@ -44,7 +44,7 @@
           </NuxtLink>
         </div>
         <div>
-          <img src="https://images.unsplash.com/photo-1591123120675-6f7f1aae0e5b?auto=format&fit=crop&q=80" alt="Parent and child with computer" class="rounded-lg shadow-lg w-full h-auto" />
+          <img src="https://images.unsplash.com/photo-1591123120675-6f7f1aae0e5b?auto=format&fit=crop&q=80" alt="Parent and child with computer" class="rounded-lg shadow-lg w-full h-auto">
         </div>
       </div>
       

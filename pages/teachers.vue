@@ -12,27 +12,33 @@
           </p>
           <div class="space-y-4">
             <div class="flex items-start gap-3">
-              <div class="mt-1 p-1.5 rounded-full bg-primary/10 text-primary">
-                <Check size="18" />
-              </div>
+              <Avatar class="h-8 w-8 mt-1 bg-primary/10">
+                <AvatarFallback class="text-primary">
+                  <Icon name="lucide:check" size="16" />
+                </AvatarFallback>
+              </Avatar>
               <div>
                 <h3 class="font-semibold">Save time on administrative tasks</h3>
                 <p class="text-sm text-muted-foreground">Automate attendance, grade recording, and reporting</p>
               </div>
             </div>
             <div class="flex items-start gap-3">
-              <div class="mt-1 p-1.5 rounded-full bg-primary/10 text-primary">
-                <Check size="18" />
-              </div>
+              <Avatar class="h-8 w-8 mt-1 bg-primary/10">
+                <AvatarFallback class="text-primary">
+                  <Icon name="lucide:check" size="16" />
+                </AvatarFallback>
+              </Avatar>
               <div>
                 <h3 class="font-semibold">Enhanced communication</h3>
                 <p class="text-sm text-muted-foreground">Connect with students and parents effortlessly</p>
               </div>
             </div>
             <div class="flex items-start gap-3">
-              <div class="mt-1 p-1.5 rounded-full bg-primary/10 text-primary">
-                <Check size="18" />
-              </div>
+              <Avatar class="h-8 w-8 mt-1 bg-primary/10">
+                <AvatarFallback class="text-primary">
+                  <Icon name="lucide:check" size="16" />
+                </AvatarFallback>
+              </Avatar>
               <div>
                 <h3 class="font-semibold">Data-driven insights</h3>
                 <p class="text-sm text-muted-foreground">Gain valuable insights into student performance and classroom trends</p>
@@ -199,5 +205,4 @@
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
-import { Check } from 'lucide-vue-next';
 </script>

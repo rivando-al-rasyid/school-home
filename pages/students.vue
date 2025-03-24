@@ -13,7 +13,7 @@
           <div class="space-y-4">
             <div class="flex items-start gap-3">
               <div class="mt-1 p-1.5 rounded-full bg-primary/10 text-primary">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check"><path d="M20 6 9 17l-5-5"/></svg>
+                <Icon name="lucide:check" size="18" />
               </div>
               <div>
                 <h3 class="font-semibold">Personalized Learning</h3>
@@ -22,7 +22,7 @@
             </div>
             <div class="flex items-start gap-3">
               <div class="mt-1 p-1.5 rounded-full bg-primary/10 text-primary">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check"><path d="M20 6 9 17l-5-5"/></svg>
+                <Icon name="lucide:check" size="18" />
               </div>
               <div>
                 <h3 class="font-semibold">Real-time Tracking</h3>
@@ -31,7 +31,7 @@
             </div>
             <div class="flex items-start gap-3">
               <div class="mt-1 p-1.5 rounded-full bg-primary/10 text-primary">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check"><path d="M20 6 9 17l-5-5"/></svg>
+                <Icon name="lucide:check" size="18" />
               </div>
               <div>
                 <h3 class="font-semibold">Seamless Collaboration</h3>
@@ -46,7 +46,7 @@
           </div>
         </div>
         <div>
-          <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80" alt="Students studying" class="rounded-lg shadow-lg w-full h-auto" />
+          <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80" alt="Students studying" class="rounded-lg shadow-lg w-full h-auto">
         </div>
       </div>
       
@@ -54,7 +54,7 @@
       <div class="mb-16">
         <h2 class="text-3xl font-bold mb-8 text-center">Your Student Dashboard</h2>
         <div class="relative rounded-xl overflow-hidden shadow-xl">
-          <img src="https://images.unsplash.com/photo-1587691592099-24045742c181?auto=format&fit=crop&q=80" alt="Student dashboard" class="w-full h-auto" />
+          <img src="https://images.unsplash.com/photo-1587691592099-24045742c181?auto=format&fit=crop&q=80" alt="Student dashboard" class="w-full h-auto">
           <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
             <div class="p-6 text-white">
               <h3 class="text-xl font-bold mb-2">Everything at Your Fingertips</h3>
@@ -73,7 +73,7 @@
         <Card class="shadow-sm">
           <CardHeader>
             <div class="w-12 h-12 mb-4 bg-primary/10 text-primary rounded-full flex items-center justify-center">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+              <Icon name="lucide:book-open" size="24" />
             </div>
             <CardTitle>Course Materials</CardTitle>
           </CardHeader>
@@ -87,7 +87,7 @@
         <Card class="shadow-sm">
           <CardHeader>
             <div class="w-12 h-12 mb-4 bg-primary/10 text-primary rounded-full flex items-center justify-center">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clipboard-list"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M15 2H9a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1z"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/></svg>
+              <Icon name="lucide:clipboard-list" size="24" />
             </div>
             <CardTitle>Assignment Management</CardTitle>
           </CardHeader>
@@ -101,7 +101,7 @@
         <Card class="shadow-sm">
           <CardHeader>
             <div class="w-12 h-12 mb-4 bg-primary/10 text-primary rounded-full flex items-center justify-center">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bar-chart-3"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
+              <Icon name="lucide:bar-chart-3" size="24" />
             </div>
             <CardTitle>Grade Tracking</CardTitle>
           </CardHeader>
@@ -115,7 +115,7 @@
         <Card class="shadow-sm">
           <CardHeader>
             <div class="w-12 h-12 mb-4 bg-primary/10 text-primary rounded-full flex items-center justify-center">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar-days"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="M8 14h.01"/><path d="M12 14h.01"/><path d="M16 14h.01"/><path d="M8 18h.01"/><path d="M12 18h.01"/><path d="M16 18h.01"/></svg>
+              <Icon name="lucide:calendar-days" size="24" />
             </div>
             <CardTitle>Calendar Integration</CardTitle>
           </CardHeader>
@@ -129,7 +129,7 @@
         <Card class="shadow-sm">
           <CardHeader>
             <div class="w-12 h-12 mb-4 bg-primary/10 text-primary rounded-full flex items-center justify-center">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-square"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              <Icon name="lucide:message-square" size="24" />
             </div>
             <CardTitle>Communication Tools</CardTitle>
           </CardHeader>
@@ -143,7 +143,7 @@
         <Card class="shadow-sm">
           <CardHeader>
             <div class="w-12 h-12 mb-4 bg-primary/10 text-primary rounded-full flex items-center justify-center">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-smartphone"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
+              <Icon name="lucide:smartphone" size="24" />
             </div>
             <CardTitle>Mobile Access</CardTitle>
           </CardHeader>
@@ -224,31 +224,19 @@
             <h3 class="text-xl font-bold mb-4">Study Guides & Tools</h3>
             <ul class="space-y-2">
               <li class="flex items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2 text-primary">
-                  <polyline points="9 11 12 14 22 4"></polyline>
-                  <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
-                </svg>
+                <Icon name="lucide:check" size="16" class="mr-2 text-primary" />
                 <span>Interactive flashcards for all subjects</span>
               </li>
               <li class="flex items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2 text-primary">
-                  <polyline points="9 11 12 14 22 4"></polyline>
-                  <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
-                </svg>
+                <Icon name="lucide:check" size="16" class="mr-2 text-primary" />
                 <span>Citation generators and bibliography tools</span>
               </li>
               <li class="flex items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2 text-primary">
-                  <polyline points="9 11 12 14 22 4"></polyline>
-                  <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
-                </svg>
+                <Icon name="lucide:check" size="16" class="mr-2 text-primary" />
                 <span>Note-taking templates and strategies</span>
               </li>
               <li class="flex items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2 text-primary">
-                  <polyline points="9 11 12 14 22 4"></polyline>
-                  <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
-                </svg>
+                <Icon name="lucide:check" size="16" class="mr-2 text-primary" />
                 <span>Test preparation guides and practice exams</span>
               </li>
             </ul>
@@ -258,31 +246,19 @@
             <h3 class="text-xl font-bold mb-4">Academic Support</h3>
             <ul class="space-y-2">
               <li class="flex items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2 text-primary">
-                  <polyline points="9 11 12 14 22 4"></polyline>
-                  <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
-                </svg>
+                <Icon name="lucide:check" size="16" class="mr-2 text-primary" />
                 <span>Virtual tutoring sessions with subject experts</span>
               </li>
               <li class="flex items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2 text-primary">
-                  <polyline points="9 11 12 14 22 4"></polyline>
-                  <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
-                </svg>
+                <Icon name="lucide:check" size="16" class="mr-2 text-primary" />
                 <span>Writing center for essay review and feedback</span>
               </li>
               <li class="flex items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2 text-primary">
-                  <polyline points="9 11 12 14 22 4"></polyline>
-                  <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
-                </svg>
+                <Icon name="lucide:check" size="16" class="mr-2 text-primary" />
                 <span>Math lab for problem-solving assistance</span>
               </li>
               <li class="flex items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2 text-primary">
-                  <polyline points="9 11 12 14 22 4"></polyline>
-                  <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
-                </svg>
+                <Icon name="lucide:check" size="16" class="mr-2 text-primary" />
                 <span>Study skills workshops and time management training</span>
               </li>
             </ul>
