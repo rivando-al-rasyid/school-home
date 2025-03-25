@@ -187,7 +187,7 @@ v-for="(event, index) in getEventsForDay(day)" :key="index"
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { Card, CardHeader, CardTitle, CardContent, CardDescription } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';

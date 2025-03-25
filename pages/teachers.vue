@@ -201,7 +201,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';

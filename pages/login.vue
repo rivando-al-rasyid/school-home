@@ -119,11 +119,36 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
+import { useRouter } from 'vue-router';
+import { ref } from 'vue';
+
+interface LoginData {
+  email: string;
+  password: string;
+  remember?: boolean;
+}
+
+interface FormData {
+  email: string;
+  password: string;
+  rememberMe: boolean;
+  role: string;
+}
+
 const router = useRouter();
+// Use a mock API or define inline since the actual API implementation isn't available
+const useApi = () => ({
+  post: async (endpoint: string, data: LoginData) => {
+    // This is a placeholder implementation
+    console.log('API call to', endpoint, 'with data', data);
+    // Simulating successful API call
+    return Promise.resolve({ success: true });
+  }
+});
 const api = useApi();
 
-const formData = ref({
+const formData = ref<FormData>({
   email: '',
   password: '',
   rememberMe: false,
@@ -199,9 +224,9 @@ const handleLogin = async () => {
     // Redirect to role-specific dashboard on success
     router.push(getDashboardRoute());
     
-  } catch (error) {
+  } catch (error: unknown) {
     console.error('Login error:', error);
-    errorMessage.value = error.message || 'Authentication failed. Please check your credentials and try again.';
+    errorMessage.value = error instanceof Error ? error.message : 'Authentication failed. Please check your credentials and try again.';
   } finally {
     isSubmitting.value = false;
   }

@@ -164,7 +164,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 const form = ref({
   firstName: '',
   lastName: '',

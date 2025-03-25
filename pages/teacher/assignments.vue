@@ -88,7 +88,7 @@
                 <td class="py-3 px-4">March 22, 2025</td>
                 <td class="py-3 px-4">28/28</td>
                 <td class="py-3 px-4">
-                  <Badge variant="success">Graded</Badge>
+                  <Badge variant="outline" class="bg-green-100 text-green-800 border-green-200">Graded</Badge>
                 </td>
                 <td class="py-3 px-4">
                   <div class="flex justify-end space-x-2">
@@ -111,7 +111,7 @@
                 <td class="py-3 px-4">March 24, 2025</td>
                 <td class="py-3 px-4">26/26</td>
                 <td class="py-3 px-4">
-                  <Badge variant="success">Graded</Badge>
+                  <Badge variant="outline" class="bg-green-100 text-green-800 border-green-200">Graded</Badge>
                 </td>
                 <td class="py-3 px-4">
                   <div class="flex justify-end space-x-2">
@@ -134,7 +134,7 @@
                 <td class="py-3 px-4">March 29, 2025</td>
                 <td class="py-3 px-4">19/24</td>
                 <td class="py-3 px-4">
-                  <Badge variant="warning">Pending</Badge>
+                  <Badge variant="outline" class="bg-yellow-100 text-yellow-800 border-yellow-200">Pending</Badge>
                 </td>
                 <td class="py-3 px-4">
                   <div class="flex justify-end space-x-2">
@@ -242,7 +242,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';

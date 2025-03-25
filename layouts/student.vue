@@ -46,11 +46,13 @@
           <CardContent>
             <div class="space-y-4">
               <div v-for="(assignment, index) in upcomingAssignments" :key="index" class="flex justify-between items-start">
-                <div>
-                  <h4 class="font-medium text-sm">{{ assignment.title }}</h4>
-                  <p class="text-xs text-muted-foreground">Due in {{ assignment.dueIn }}</p>
+                <div class="flex items-center justify-between">
+                  <div>
+                    <h4 class="font-medium text-sm">{{ assignment.title }}</h4>
+                    <p class="text-xs text-muted-foreground">Due in {{ assignment.dueIn }}</p>
+                  </div>
+                  <Badge :variant="assignment.priorityType as ('default' | 'secondary' | 'destructive' | 'outline')">{{ assignment.priority }}</Badge>
                 </div>
-                <Badge :variant="assignment.priorityType">{{ assignment.priority }}</Badge>
               </div>
             </div>
           </CardContent>
@@ -65,7 +67,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
