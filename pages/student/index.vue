@@ -159,19 +159,19 @@
           </CardHeader>
           <CardContent>
             <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
-              <Button variant="outline" class="h-auto flex-col py-4 px-3 space-y-2 items-center justify-center">
+              <Button variant="outline" class="h-auto flex-col py-4 px-3 space-y-2 items-center justify-center" @click="navigateTo('/student/resources/library')">
                 <Icon name="lucide:book-open" class="h-6 w-6" />
                 <span class="text-xs">Digital Library</span>
               </Button>
-              <Button variant="outline" class="h-auto flex-col py-4 px-3 space-y-2 items-center justify-center">
+              <Button variant="outline" class="h-auto flex-col py-4 px-3 space-y-2 items-center justify-center" @click="navigateTo('/student/resources/videos')">
                 <Icon name="lucide:video" class="h-6 w-6" />
                 <span class="text-xs">Video Tutorials</span>
               </Button>
-              <Button variant="outline" class="h-auto flex-col py-4 px-3 space-y-2 items-center justify-center">
+              <Button variant="outline" class="h-auto flex-col py-4 px-3 space-y-2 items-center justify-center" @click="navigateTo('/student/resources/quizzes')">
                 <Icon name="lucide:brain-circuit" class="h-6 w-6" />
                 <span class="text-xs">Practice Quizzes</span>
               </Button>
-              <Button variant="outline" class="h-auto flex-col py-4 px-3 space-y-2 items-center justify-center">
+              <Button variant="outline" class="h-auto flex-col py-4 px-3 space-y-2 items-center justify-center" @click="navigateTo('/student/resources/groups')">
                 <Icon name="lucide:users" class="h-6 w-6" />
                 <span class="text-xs">Study Groups</span>
               </Button>
@@ -179,7 +179,7 @@
           </CardContent>
         </Card>
       </div>
-    </div>
+    </div>  
   
 </template>
 
@@ -187,6 +187,14 @@
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+
+function navigateTo(route) {
+  router.push(route)
+}
+
 definePageMeta({
   layout: 'student'
 })
