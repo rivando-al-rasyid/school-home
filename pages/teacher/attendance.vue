@@ -128,7 +128,7 @@
                       </select>
                     </td>
                     <td class="py-3 px-4">
-                      <input type="text" class="w-full text-sm p-1 border rounded-md" placeholder="Add notes..." />
+                      <input type="text" class="w-full text-sm p-1 border rounded-md" placeholder="Add notes...">
                     </td>
                     <td class="py-3 px-4 text-center">
                       <Button variant="ghost" size="icon" class="h-8 w-8">
@@ -294,7 +294,7 @@
                       <div v-if="day <= 25" class="h-4 w-4 rounded-full" :class="{
                         'bg-success': day !== 12,
                         'bg-warning': day === 12
-                      }"></div>
+                      }" />
                     </div>
                   </div>
                   
@@ -311,7 +311,7 @@
                         'bg-success': day !== 8 && day !== 15 && day !== 22 && day !== 25,
                         'bg-warning': day === 15 || day === 25,
                         'bg-destructive': day === 8 || day === 22
-                      }"></div>
+                      }" />
                     </div>
                   </div>
                   
@@ -327,7 +327,7 @@
                       <div v-if="day <= 25" class="h-4 w-4 rounded-full" :class="{
                         'bg-success': day !== 10,
                         'bg-blue-500': day === 10
-                      }"></div>
+                      }" />
                     </div>
                   </div>
                 </div>
@@ -336,19 +336,19 @@
             
             <div class="flex space-x-6 items-center mt-6">
               <div class="flex items-center space-x-2">
-                <div class="h-3 w-3 rounded-full bg-success"></div>
+                <div class="h-3 w-3 rounded-full bg-success mr-2" />
                 <span class="text-sm">Present</span>
               </div>
               <div class="flex items-center space-x-2">
-                <div class="h-3 w-3 rounded-full bg-warning"></div>
+                <div class="h-3 w-3 rounded-full bg-warning mr-2" />
                 <span class="text-sm">Late</span>
               </div>
               <div class="flex items-center space-x-2">
-                <div class="h-3 w-3 rounded-full bg-destructive"></div>
+                <div class="h-3 w-3 rounded-full bg-destructive mr-2" />
                 <span class="text-sm">Absent</span>
               </div>
               <div class="flex items-center space-x-2">
-                <div class="h-3 w-3 rounded-full bg-blue-500"></div>
+                <div class="h-3 w-3 rounded-full bg-blue-500 mr-2" />
                 <span class="text-sm">Excused</span>
               </div>
             </div>
@@ -361,7 +361,6 @@
 
 <script setup>
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 definePageMeta({
