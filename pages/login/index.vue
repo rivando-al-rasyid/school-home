@@ -6,10 +6,10 @@
         <p class="text-muted-foreground mt-2">Education simplified, success amplified</p>
       </div>
       
-      <div class="shadow-lg border-t-4 border-t-primary bg-white rounded-lg">
-        <div class="space-y-1 p-6 border-b">
-          <h2 class="text-2xl font-bold text-center">Login</h2>
-          <p class="text-center text-gray-500">Sign in to access your dashboard</p>
+      <div class="shadow-lg border-t-4 border-t-amber-600 bg-white rounded-lg">
+        <div class="space-y-1 p-6 border-b bg-gradient-to-r from-amber-50 to-white">
+          <h2 class="text-2xl font-bold text-center text-amber-800">Student Login</h2>
+          <p class="text-center text-gray-500">Sign in to access your student dashboard</p>
         </div>
         <div class="p-6">
           <form class="space-y-4" @submit.prevent="handleLogin">
@@ -18,33 +18,16 @@
               {{ errorMessage }}
             </div>
             
-            <!-- Role Selection -->
-            <div class="space-y-2">
-              <label for="role" class="text-sm font-medium">Login As</label>
-              <select
-                id="role"
-                v-model="formData.role"
-                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
-                required
-              >
-                <option value="">Select your role</option>
-                <option value="admin">Administrator</option>
-                <option value="teacher">Teacher</option>
-                <option value="student">Student</option>
-                <option value="parent">Parent</option>
-              </select>
-            </div>
-            
             <!-- Email -->
             <div class="space-y-2">
-              <label for="email" class="text-sm font-medium">Email</label>
+              <label for="email" class="text-sm font-medium">Student Email</label>
               <input
                 id="email"
                 v-model="formData.email"
                 type="email"
-                :placeholder="getEmailPlaceholder()"
+                placeholder="student@school.com"
                 required
-                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-500"
               >
             </div>
             
@@ -62,7 +45,7 @@
                   v-model="formData.password"
                   :type="showPassword ? 'text' : 'password'"
                   required
-                  class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                  class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-500"
                 >
                 <div class="absolute inset-y-0 right-0 flex items-center pr-3">
                   <button type="button" class="focus:outline-none" @click="showPassword = !showPassword">
@@ -90,7 +73,7 @@
             <Button 
               type="submit" 
               class="w-full"
-              :disabled="isSubmitting || !formData.role"
+              :disabled="isSubmitting"
             >
               <span v-if="isSubmitting" class="flex items-center justify-center">
                 <NuxtIcon name="lucide:loader" class="animate-spin -ml-1 mr-3 h-4 w-4 text-white" />
@@ -133,7 +116,6 @@ interface FormData {
   email: string;
   password: string;
   rememberMe: boolean;
-  role: string;
 }
 
 const router = useRouter();
@@ -151,78 +133,27 @@ const api = useApi();
 const formData = ref<FormData>({
   email: '',
   password: '',
-  rememberMe: false,
-  role: ''
+  rememberMe: false
 });
 
 const isSubmitting = ref(false);
 const showPassword = ref(false);
 const errorMessage = ref('');
 
-const getEmailPlaceholder = () => {
-  switch (formData.value.role) {
-    case 'admin':
-      return 'admin@school.com';
-    case 'teacher':
-      return 'teacher@school.com';
-    case 'student':
-      return 'student@school.com';
-    case 'parent':
-      return 'parent@school.com';
-    default:
-      return 'email@example.com';
-  }
-};
-
-const getRoleEndpoint = () => {
-  switch (formData.value.role) {
-    case 'admin':
-      return '/api/admin/login';
-    case 'teacher':
-      return '/api/teacher/login';
-    case 'student':
-      return '/api/student/login';
-    case 'parent':
-      return '/api/parent/login';
-    default:
-      return '/api/login';
-  }
-};
-
-const getDashboardRoute = () => {
-  switch (formData.value.role) {
-    case 'admin':
-      return '/admin/dashboard';
-    case 'teacher':
-      return '/teacher/dashboard';
-    case 'student':
-      return '/student/dashboard';
-    case 'parent':
-      return '/parent/dashboard';
-    default:
-      return '/dashboard';
-  }
-};
-
 const handleLogin = async () => {
-  if (!formData.value.role) {
-    errorMessage.value = 'Please select your role';
-    return;
-  }
-  
   isSubmitting.value = true;
   errorMessage.value = '';
   
   try {
     // Using the API composable for login
-    await api.post(getRoleEndpoint(), {
+    await api.post('/api/student/login', {
       email: formData.value.email,
       password: formData.value.password,
       remember: formData.value.rememberMe
     });
     
-    // Redirect to role-specific dashboard on success
-    router.push(getDashboardRoute());
+    // Redirect to student dashboard on success
+    router.push('/student/dashboard');
     
   } catch (error: unknown) {
     console.error('Login error:', error);
