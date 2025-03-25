@@ -12,12 +12,12 @@
           <div class="p-4 border-b">
             <div class="flex items-center space-x-4">
               <Avatar>
-                <AvatarImage src="https://i.pravatar.cc/150?img=33" />
-                <AvatarFallback>JD</AvatarFallback>
+                <AvatarImage src="https://i.pravatar.cc/150?img=32" />
+                <AvatarFallback>JS</AvatarFallback>
               </Avatar>
               <div>
-                <h3 class="font-medium">John Doe</h3>
-                <p class="text-sm text-muted-foreground">Student of John Doe</p>
+                <h3 class="font-medium">John Smith</h3>
+                <p class="text-sm text-muted-foreground">Grade 10</p>
               </div>
             </div>
           </div>
@@ -41,14 +41,16 @@
         
         <Card class="shadow-sm">
           <CardHeader>
-            <CardTitle class="text-sm">Upcoming Events</CardTitle>
+            <CardTitle class="text-sm">Upcoming Deadlines</CardTitle>
           </CardHeader>
           <CardContent>
             <div class="space-y-4">
-              <div v-for="(event, index) in upcomingEvents" :key="index">
-                <h4 class="font-medium text-sm">{{ event.title }}</h4>
-                <p class="text-xs text-muted-foreground">{{ event.date }}</p>
-                <p v-if="event.location" class="text-xs text-muted-foreground">{{ event.location }}</p>
+              <div v-for="(assignment, index) in upcomingAssignments" :key="index" class="flex justify-between items-start">
+                <div>
+                  <h4 class="font-medium text-sm">{{ assignment.title }}</h4>
+                  <p class="text-xs text-muted-foreground">Due in {{ assignment.dueIn }}</p>
+                </div>
+                <Badge :variant="assignment.priorityType">{{ assignment.priority }}</Badge>
               </div>
             </div>
           </CardContent>
@@ -71,25 +73,30 @@ import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 const navigationItems = [
   { path: '/student', icon: 'lucide:layout-dashboard', label: 'Dashboard' },
   { path: '/student/courses', icon: 'lucide:book', label: 'Courses' },
-  { path: '/student/assignments', icon: 'lucide:bar-chart-2', label: 'Grades & Progress' },
-  { path: '/student/grades', icon: 'lucide:clipboard-check', label: 'Behavior' },
-  { path: '/student/calendar', icon: 'lucide:mail', label: 'Messages', badge: '2' },
-  { path: '/student/messages', icon: 'lucide:credit-card', label: 'Payments' },
+  { path: '/student/assignments', icon: 'lucide:clipboard-check', label: 'Assignments' },
+  { path: '/student/grades', icon: 'lucide:bar-chart-2', label: 'Grades' },
+  { path: '/student/calendar', icon: 'lucide:calendar', label: 'Calendar' },
+  { path: '/student/messages', icon: 'lucide:mail', label: 'Messages', badge: '2' },
 ];
 
-const upcomingEvents = [
+const upcomingAssignments = [
   {
-    title: 'Parent-Teacher Conference',
-    date: 'March 28, 2025 • 4:00 PM',
-    location: 'Room 105'
+    title: 'Math Assignment',
+    dueIn: '2 days',
+    priority: 'Urgent',
+    priorityType: 'destructive'
   },
   {
-    title: 'Spring Break',
-    date: 'April 3-10, 2025'
+    title: 'Science Project',
+    dueIn: '5 days',
+    priority: 'Important',
+    priorityType: 'warning'
   },
   {
-    title: 'Field Trip - Science Museum',
-    date: 'April 15, 2025'
+    title: 'English Essay',
+    dueIn: '7 days',
+    priority: 'Normal',
+    priorityType: 'default'
   }
 ];
 </script>
