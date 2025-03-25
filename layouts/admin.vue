@@ -24,10 +24,12 @@
           <div class="p-4">
             <nav class="space-y-1">
               <template v-for="(item, index) in navigationItems" :key="index">
-                <NuxtLink :to="item.path" :class="[
-                  'flex items-center px-3 py-2 text-sm rounded-md',
-                  $route.path === item.path ? 'bg-primary/10 text-primary font-medium' : 'hover:bg-accent'
-                ]">
+                <NuxtLink 
+                  :to="item.path" 
+                  :class="[
+                    'flex items-center px-3 py-2 text-sm rounded-md',
+                    $route.path === item.path ? 'bg-primary/10 text-primary font-medium' : 'hover:bg-accent'
+                  ]">
                   <Icon :name="item.icon" class="mr-2 h-4 w-4" />
                   {{ item.label }}
                 </NuxtLink>
