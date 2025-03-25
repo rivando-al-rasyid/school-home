@@ -5,7 +5,7 @@
     <div class="container mx-auto flex items-center justify-between px-4 py-4">
       <NuxtLink to="/">
         <div class="flex items-center">
-          <img src="https://img.icons8.com/color/96/000000/school.png" alt="School Management System Logo" class="mr-3 h-12 w-auto" />
+          <img src="https://img.icons8.com/color/96/000000/school.png" alt="School Management System Logo" class="mr-3 h-12 w-auto" >
           <h1 class="text-2xl font-bold text-primary">School Management System</h1>
         </div>
       </NuxtLink>
@@ -36,9 +36,9 @@
 
       <!-- Mobile menu button -->
       <button 
-        @click="toggleMobileMenu" 
-        class="md:hidden p-2"
+        class="md:hidden p-2" 
         aria-label="Toggle menu"
+        @click="toggleMobileMenu"
       >
         <svg 
           xmlns="http://www.w3.org/2000/svg" 
@@ -94,7 +94,7 @@
       <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
         <div>
           <div class="flex items-center mb-4">
-            <img src="https://img.icons8.com/color/96/000000/school.png" alt="School Management System Logo" class="mr-3 h-10 w-auto" />
+            <img src="https://img.icons8.com/color/96/000000/school.png" alt="School Management System Logo" class="mr-3 h-10 w-auto" >
             <h3 class="text-xl font-bold text-primary">SMS</h3>
           </div>
 
@@ -107,9 +107,9 @@
           <h4 class="font-bold mb-4">Quick Links</h4>
           <ul class="space-y-2">
             <li><NuxtLink to="/" class="text-muted-foreground hover:text-primary">Home</NuxtLink></li>
-            <li><NuxtLink to="#about" class="text-muted-foreground hover:text-primary">About</NuxtLink></li>
-            <li><NuxtLink to="#features" class="text-muted-foreground hover:text-primary">Features</NuxtLink></li>
-            <li><NuxtLink to="#contact" class="text-muted-foreground hover:text-primary">Contact</NuxtLink></li>
+            <li><NuxtLink to="/about" class="text-muted-foreground hover:text-primary">About</NuxtLink></li>
+            <li><NuxtLink to="/features" class="text-muted-foreground hover:text-primary">Features</NuxtLink></li>
+            <li><NuxtLink to="/contact" class="text-muted-foreground hover:text-primary">Contact</NuxtLink></li>
             <li><NuxtLink to="/privacy" class="text-muted-foreground hover:text-primary">Privacy Policy</NuxtLink></li>
             <li><NuxtLink to="/terms" class="text-muted-foreground hover:text-primary">Terms of Service</NuxtLink></li>
           </ul>
@@ -144,7 +144,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref } from 'vue';
 
 // Add the missing data properties and methods

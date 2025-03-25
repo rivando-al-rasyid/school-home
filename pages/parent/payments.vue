@@ -336,7 +336,7 @@ v-for="(method, index) in paymentMethods" :key="index"
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { Card, CardHeader, CardTitle, CardContent, CardDescription } from '@/components/ui/card';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import { Badge } from '@/components/ui/badge';

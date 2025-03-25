@@ -96,7 +96,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 // No specific script functionality required for this page
 </script>
 

@@ -46,7 +46,7 @@
             <div class="space-y-4">
               <div v-for="(status, index) in systemStatus" :key="index" class="flex items-center justify-between">
                 <span class="text-sm">{{ status.label }}:</span>
-                <Badge v-if="status.badge" :variant="status.badge">{{ status.value }}</Badge>
+                <Badge v-if="status.badge" :variant="status.badge as ('default' | 'secondary' | 'destructive' | 'outline')">{{ status.value }}</Badge>
                 <span v-else class="text-sm text-muted-foreground">{{ status.value }}</span>
               </div>
             </div>
@@ -62,7 +62,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 const navigationItems = [
   { path: '/admin', icon: 'lucide:layout-dashboard', label: 'Dashboard' },
   { path: '/admin/users', icon: 'lucide:users', label: 'User Management' },

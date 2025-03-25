@@ -264,7 +264,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';

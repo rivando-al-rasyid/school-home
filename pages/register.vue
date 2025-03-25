@@ -212,7 +212,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 const router = useRouter();
 
 const formData = ref({
