@@ -14,8 +14,8 @@
       <CarouselContent>
         <CarouselItem v-for="slide in slides" :key="slide.id" class="h-full">
           <div class="relative h-full">
-            <img :src="`${slide.src}?w=1600&auto=format&fit=crop&q=80`" :alt="slide.alt" class="h-full w-full object-cover" />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-black/30"></div>
+            <img :src="`${slide.src}?w=1600&auto=format&fit=crop&q=80`" :alt="slide.alt" class="h-full w-full object-cover" >
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-black/30"/>
             <div class="absolute bottom-0 left-0 right-0 p-8 text-white">
               <h2 class="mb-2 text-3xl font-bold">{{ slide.caption }}</h2>
             </div>
@@ -107,15 +107,15 @@
           </CardHeader>
           <CardContent>
             <div class="space-y-2">
-              <NuxtLink to="/students" class="block p-2 rounded-md hover:bg-accent transition-colors">
+              <NuxtLink to="/student" class="block p-2 rounded-md hover:bg-accent transition-colors">
                 <div class="font-medium">Student Portal</div>
                 <div class="text-sm text-muted-foreground">Access your courses and grades</div>
               </NuxtLink>
-              <NuxtLink to="/teachers" class="block p-2 rounded-md hover:bg-accent transition-colors">
+              <NuxtLink to="/teacher" class="block p-2 rounded-md hover:bg-accent transition-colors">
                 <div class="font-medium">Teacher Portal</div>
                 <div class="text-sm text-muted-foreground">Manage classes and assignments</div>
               </NuxtLink>
-              <NuxtLink to="/parents" class="block p-2 rounded-md hover:bg-accent transition-colors">
+              <NuxtLink to="/parent" class="block p-2 rounded-md hover:bg-accent transition-colors">
                 <div class="font-medium">Parent Portal</div>
                 <div class="text-sm text-muted-foreground">Monitor your child's progress</div>
               </NuxtLink>
@@ -139,7 +139,7 @@
         <NuxtLink to="/features">
           <Card class="overflow-hidden h-full hover:shadow-lg transition-shadow">
             <div class="aspect-video">
-              <img src="https://images.unsplash.com/photo-1610563166150-b34df4f3bcd6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1076&q=80" alt="Features" class="w-full h-full object-cover" />
+              <img src="https://images.unsplash.com/photo-1610563166150-b34df4f3bcd6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1076&q=80" alt="Features" class="w-full h-full object-cover" >
             </div>
             <CardContent class="p-6">
               <h3 class="text-2xl font-bold mb-2">Powerful Features</h3>
@@ -160,7 +160,7 @@
         <NuxtLink to="/about">
           <Card class="overflow-hidden h-full hover:shadow-lg transition-shadow">
             <div class="aspect-video">
-              <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="About Us" class="w-full h-full object-cover" />
+              <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="About Us" class="w-full h-full object-cover" >
             </div>
             <CardContent class="p-6">
               <h3 class="text-2xl font-bold mb-2">About Our Platform</h3>
@@ -183,7 +183,7 @@
         <NuxtLink to="/students">
           <Card class="overflow-hidden h-full hover:shadow-lg transition-shadow">
             <div class="aspect-video">
-              <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Students" class="w-full h-full object-cover" />
+              <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Students" class="w-full h-full object-cover" >
             </div>
             <CardContent class="p-6">
               <h3 class="text-xl font-bold mb-2">For Students</h3>
@@ -197,7 +197,7 @@
         <NuxtLink to="/teachers">
           <Card class="overflow-hidden h-full hover:shadow-lg transition-shadow">
             <div class="aspect-video">
-              <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" alt="Teachers" class="w-full h-full object-cover" />
+              <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" alt="Teachers" class="w-full h-full object-cover" >
             </div>
             <CardContent class="p-6">
               <h3 class="text-xl font-bold mb-2">For Teachers</h3>
@@ -211,7 +211,7 @@
         <NuxtLink to="/parents">
           <Card class="overflow-hidden h-full hover:shadow-lg transition-shadow">
             <div class="aspect-video">
-              <img src="https://images.unsplash.com/photo-1591123120675-6f7f1aae0e5b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80" alt="Parents" class="w-full h-full object-cover" />
+              <img src="https://images.unsplash.com/photo-1591123120675-6f7f1aae0e5b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80" alt="Parents" class="w-full h-full object-cover" >
             </div>
             <CardContent class="p-6">
               <h3 class="text-xl font-bold mb-2">For Parents</h3>
@@ -231,7 +231,7 @@
       <div data-aos="fade-right">
         <Card class="overflow-hidden h-full hover:shadow-lg transition-shadow">
           <div class="aspect-video">
-            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Sign Up" class="w-full h-full object-cover" />
+            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Sign Up" class="w-full h-full object-cover" >
           </div>
           <CardContent class="p-6">
             <h3 class="text-xl font-bold mb-2">New to Our Platform?</h3>
@@ -248,7 +248,7 @@
       <div data-aos="fade-left">
         <Card class="overflow-hidden h-full hover:shadow-lg transition-shadow">
           <div class="aspect-video">
-            <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Login" class="w-full h-full object-cover" />
+            <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Login" class="w-full h-full object-cover" >
           </div>
           <CardContent class="p-6">
             <h3 class="text-xl font-bold mb-2">Already Have an Account?</h3>
