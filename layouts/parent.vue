@@ -1,97 +1,141 @@
 <template>
-  <div class="container mx-auto py-8 px-4">
-    <div class="mb-8">
-      <h1 class="text-3xl font-bold mb-2">Parent Portal</h1>
-      <p class="text-muted-foreground">Manage your child's education, view grades, and communicate with teachers</p>
-    </div>
-
-    <div class="grid md:grid-cols-12 gap-8">
-      <!-- Sidebar -->
-      <div class="md:col-span-3">
-        <div class="bg-card rounded-lg border shadow-sm mb-4">
-          <div class="p-4 border-b">
-            <div class="flex items-center space-x-4">
-              <Avatar>
-                <AvatarImage src="https://i.pravatar.cc/150?img=33" />
-                <AvatarFallback>JD</AvatarFallback>
-              </Avatar>
-              <div>
-                <h3 class="font-medium">Jennifer Davis</h3>
-                <p class="text-sm text-muted-foreground">Parent of Emma Davis</p>
-              </div>
-            </div>
-          </div>
-          <div class="p-4">
-            <nav class="space-y-1">
-              <template v-for="(item, index) in navigationItems" :key="index">
-                <NuxtLink 
-                  :to="item.path" 
-                  :class="[
-                    'flex items-center px-3 py-2 text-sm rounded-md',
-                    $route.path === item.path ? 'bg-primary/10 text-primary font-medium' : 'hover:bg-accent'
-                  ]">
-                  <Icon :name="item.icon" class="mr-2 h-4 w-4" />
-                  {{ item.label }}
-                  <Badge v-if="item.badge" class="ml-auto" variant="secondary">{{ item.badge }}</Badge>
-                </NuxtLink>
-              </template>
-            </nav>
+  <SidebarProvider>
+    <Sidebar>
+      <!-- Sidebar header with profile -->
+      <SidebarHeader class="p-4 border-b">
+        <div class="flex items-center space-x-4">
+          <Avatar>
+            <AvatarImage src="https://i.pravatar.cc/150?img=35" />
+            <AvatarFallback>MP</AvatarFallback>
+          </Avatar>
+          <div>
+            <h3 class="font-medium">Michael Peterson</h3>
+            <p class="text-sm text-muted-foreground">Parent</p>
           </div>
         </div>
-        
-        <Card class="shadow-sm">
-          <CardHeader>
-            <CardTitle class="text-sm">Upcoming Events</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div class="space-y-4">
-              <div v-for="(event, index) in upcomingEvents" :key="index">
-                <h4 class="font-medium text-sm">{{ event.title }}</h4>
-                <p class="text-xs text-muted-foreground">{{ event.date }}</p>
-                <p v-if="event.location" class="text-xs text-muted-foreground">{{ event.location }}</p>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-      </div>
-      
-      <!-- Main Content -->
-      <div class="md:col-span-9">
+      </SidebarHeader>
+
+      <!-- Sidebar content with navigation -->
+      <SidebarContent>
+        <SidebarGroup>
+          <SidebarGroupLabel>Navigation</SidebarGroupLabel>
+          <SidebarGroupContent>
+            <SidebarMenu>
+              <SidebarMenuItem v-for="item in navigationItems" :key="item.path">
+                <SidebarMenuButton as-child>
+                  <NuxtLink 
+                    :to="item.path" 
+                    :class="[$route.path === item.path ? 'text-primary font-medium' : '']"
+                  >
+                    <component :is="item.icon" class="h-4 w-4" />
+                    <span>{{ item.label }}</span>
+                    <Badge 
+                      v-if="item.badge" 
+                      variant="secondary" 
+                      class="ml-auto"
+                    >
+                      {{ item.badge }}
+                    </Badge>
+                  </NuxtLink>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+            </SidebarMenu>
+          </SidebarGroupContent>
+        </SidebarGroup>
+      </SidebarContent>
+
+      <!-- Sidebar footer with upcoming events -->
+      <SidebarFooter class="border-t p-4">
+        <h4 class="text-sm font-medium mb-2">Upcoming Events</h4>
+        <div class="space-y-4">
+          <div v-for="(event, index) in upcomingEvents" :key="index">
+            <h5 class="font-medium text-sm">{{ event.title }}</h5>
+            <p class="text-xs text-muted-foreground">{{ event.date }}</p>
+            <p class="text-xs text-muted-foreground">{{ event.location }}</p>
+          </div>
+        </div>
+      </SidebarFooter>
+    </Sidebar>
+
+    <main class="flex-1">
+      <!-- Mobile header with menu button -->
+      <header class="lg:hidden flex items-center justify-between p-4 border-b">
+        <div class="flex items-center">
+          <SidebarTrigger class="mr-2">
+            <Button variant="ghost" size="icon">
+              <MenuIcon class="h-5 w-5" />
+            </Button>
+          </SidebarTrigger>
+          <h1 class="text-xl font-bold">Parent Portal</h1>
+        </div>
+        <Avatar>
+          <AvatarImage src="https://i.pravatar.cc/150?img=35" />
+          <AvatarFallback>MP</AvatarFallback>
+        </Avatar>
+      </header>
+
+      <!-- Main content -->
+      <div class="container py-8 px-4">
         <slot />
       </div>
-    </div>
-  </div>
+    </main>
+  </SidebarProvider>
 </template>
 
 <script setup lang="ts">
-import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
+import { 
+  Sidebar, 
+  SidebarContent, 
+  SidebarFooter, 
+  SidebarGroup,
+  SidebarGroupContent,
+  SidebarGroupLabel, 
+  SidebarHeader,
+  SidebarMenu,
+  SidebarMenuButton,
+  SidebarMenuItem,
+  SidebarProvider,
+  SidebarTrigger
+} from '@/components/ui/sidebar';
+import { Button } from '@/components/ui/button';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
+import { Badge } from '@/components/ui/badge';
+import { 
+  LayoutDashboard as DashboardIcon, 
+  GraduationCap as GraduationCapIcon, 
+  Calendar as CalendarIcon, 
+  ClipboardList as ClipboardListIcon, 
+  Mail as MailIcon, 
+  FileText as FileTextIcon, 
+  Settings as SettingsIcon,
+  Menu as MenuIcon
+} from 'lucide-vue-next';
 
 const navigationItems = [
-  { path: '/parent', icon: 'lucide:layout-dashboard', label: 'Dashboard' },
-  { path: '/parent/children', icon: 'lucide:users', label: 'My Children' },
-  { path: '/parent/grades', icon: 'lucide:bar-chart-2', label: 'Grades & Progress' },
-  { path: '/parent/attendance', icon: 'lucide:calendar', label: 'Attendance' },
-  { path: '/parent/behavior', icon: 'lucide:clipboard-check', label: 'Behavior' },
-  { path: '/parent/messages', icon: 'lucide:mail', label: 'Messages', badge: '2' },
-  { path: '/parent/payments', icon: 'lucide:credit-card', label: 'Payments' },
-  { path: '/parent/calendar', icon: 'lucide:calendar', label: 'School Calendar' }
+  { path: '/parent', icon: DashboardIcon, label: 'Dashboard' },
+  { path: '/parent/grades', icon: GraduationCapIcon, label: 'Grades' },
+  { path: '/parent/attendance', icon: CalendarIcon, label: 'Attendance' },
+  { path: '/parent/assignments', icon: ClipboardListIcon, label: 'Assignments', badge: '3' },
+  { path: '/parent/messages', icon: MailIcon, label: 'Messages', badge: '2' },
+  { path: '/parent/calendar', icon: FileTextIcon, label: 'Calendar' },
+  { path: '/parent/settings', icon: SettingsIcon, label: 'Settings' }
 ];
 
 const upcomingEvents = [
   {
     title: 'Parent-Teacher Conference',
-    date: 'March 28, 2025 • 4:00 PM',
-    location: 'Room 105'
+    date: 'March 28, 2025 - 4:00 PM',
+    location: 'School Auditorium'
   },
   {
-    title: 'Spring Break',
-    date: 'April 3-10, 2025'
+    title: 'Science Fair',
+    date: 'April 10, 2025 - 1:00 PM',
+    location: 'Gymnasium'
   },
   {
-    title: 'Field Trip - Science Museum',
-    date: 'April 15, 2025'
+    title: 'School Holiday',
+    date: 'April 15, 2025',
+    location: 'No School'
   }
 ];
 </script>
