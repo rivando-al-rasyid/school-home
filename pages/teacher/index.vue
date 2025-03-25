@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto py-8 px-4">
+  <div>
     <div class="mb-8">
       <h1 class="text-3xl font-bold mb-2">Teacher Portal</h1>
       <p class="text-muted-foreground">Manage your classes, assignments, and student grades</p>

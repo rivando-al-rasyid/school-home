@@ -1,262 +1,356 @@
 <template>
   <div>
-    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
-      <div class="relative w-full md:w-96">
-        <input type="text" placeholder="Search messages..." class="pl-8 pr-4 py-2 text-sm rounded-md border focus:ring-2 focus:ring-primary focus:border-primary w-full" />
-        <Icon name="lucide:search" class="h-4 w-4 absolute left-2.5 top-1/2 -translate-y-1/2 text-muted-foreground" />
-      </div>
-      <Button>
-        <Icon name="lucide:plus" class="mr-2 h-4 w-4" />
-        New Message
-      </Button>
+    <div class="mb-8">
+      <h1 class="text-3xl font-bold mb-2">Messages</h1>
+      <p class="text-muted-foreground">Communicate with students, parents, and colleagues</p>
     </div>
     
-    <div class="grid md:grid-cols-12 gap-6">
-      <!-- Message List -->
-      <div class="md:col-span-5 lg:col-span-4">
-        <Card class="shadow-sm border">
-          <CardHeader class="px-4 py-3">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+      <!-- Sidebar -->
+      <div class="lg:col-span-4">
+        <Card>
+          <CardHeader class="pb-3">
             <div class="flex justify-between items-center">
-              <CardTitle class="text-base">Inbox</CardTitle>
-              <Badge>5 unread</Badge>
+              <CardTitle>Conversations</CardTitle>
+              <Button size="sm">
+                <Icon name="lucide:plus" class="h-4 w-4 mr-2" />
+                New Message
+              </Button>
             </div>
           </CardHeader>
           <CardContent class="p-0">
-            <div class="space-y-px">
-              <div class="p-4 cursor-pointer bg-primary/5 border-l-2 border-primary hover:bg-accent">
-                <div class="flex justify-between items-start mb-1">
-                  <h4 class="font-medium text-sm flex items-center">
-                    <span class="h-2 w-2 rounded-full bg-primary mr-2"></span>
-                    Principal Anderson
-                  </h4>
-                  <span class="text-xs text-muted-foreground">12:45 PM</span>
+            <div class="relative h-[500px] overflow-auto">
+              <div class="sticky top-0 p-3 bg-card border-b mb-0.5">
+                <div class="relative">
+                  <Input placeholder="Search messages..." class="pl-8" />
+                  <Icon name="lucide:search" class="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
                 </div>
-                <h5 class="text-sm font-medium mb-1">Staff Meeting Reminder</h5>
-                <p class="text-xs text-muted-foreground line-clamp-2">
-                  Reminder that we have our monthly staff meeting tomorrow at 4pm in the library. Please bring your department reports and...
-                </p>
               </div>
               
-              <div class="p-4 cursor-pointer bg-primary/5 border-l-2 border-primary hover:bg-accent">
-                <div class="flex justify-between items-start mb-1">
-                  <h4 class="font-medium text-sm flex items-center">
-                    <span class="h-2 w-2 rounded-full bg-primary mr-2"></span>
-                    Emily Brown's Parent
-                  </h4>
-                  <span class="text-xs text-muted-foreground">Yesterday</span>
+              <div>
+                <div 
+                  v-for="(conversation, index) in conversations" 
+                  :key="index"
+                  :class="[
+                    'flex items-center p-3 hover:bg-accent cursor-pointer',
+                    selectedConversation === index ? 'bg-accent' : '',
+                    conversation.unread ? 'border-l-2 border-primary' : ''
+                  ]"
+                  @click="selectConversation(index)"
+                >
+                  <Avatar class="h-10 w-10 mr-3">
+                    <AvatarImage :src="conversation.avatar" />
+                    <AvatarFallback>{{ getInitials(conversation.name) }}</AvatarFallback>
+                  </Avatar>
+                  <div class="flex-1 min-w-0">
+                    <div class="flex justify-between items-center mb-1">
+                      <h4 class="font-medium truncate">{{ conversation.name }}</h4>
+                      <span class="text-xs text-muted-foreground whitespace-nowrap ml-2">{{ conversation.time }}</span>
+                    </div>
+                    <div class="flex justify-between">
+                      <p class="text-sm text-muted-foreground truncate">{{ conversation.lastMessage }}</p>
+                      <Badge v-if="conversation.unread" class="ml-2">{{ conversation.unread }}</Badge>
+                    </div>
+                  </div>
                 </div>
-                <h5 class="text-sm font-medium mb-1">Question about homework</h5>
-                <p class="text-xs text-muted-foreground line-clamp-2">
-                  Hello Ms. Wilson, Emily is having some trouble with the latest algebra homework. Could we schedule a time to discuss...
-                </p>
-              </div>
-              
-              <div class="p-4 cursor-pointer bg-primary/5 border-l-2 border-primary hover:bg-accent">
-                <div class="flex justify-between items-start mb-1">
-                  <h4 class="font-medium text-sm flex items-center">
-                    <span class="h-2 w-2 rounded-full bg-primary mr-2"></span>
-                    School IT Department
-                  </h4>
-                  <span class="text-xs text-muted-foreground">Mar 24</span>
-                </div>
-                <h5 class="text-sm font-medium mb-1">New Software Installation</h5>
-                <p class="text-xs text-muted-foreground line-clamp-2">
-                  We will be installing the new mathematics modeling software on all classroom computers this weekend. Please save any...
-                </p>
-              </div>
-              
-              <div class="p-4 cursor-pointer bg-primary/5 border-l-2 border-primary hover:bg-accent">
-                <div class="flex justify-between items-start mb-1">
-                  <h4 class="font-medium text-sm flex items-center">
-                    <span class="h-2 w-2 rounded-full bg-primary mr-2"></span>
-                    Math Department
-                  </h4>
-                  <span class="text-xs text-muted-foreground">Mar 23</span>
-                </div>
-                <h5 class="text-sm font-medium mb-1">Curriculum Meeting</h5>
-                <p class="text-xs text-muted-foreground line-clamp-2">
-                  Please join us for a curriculum planning meeting on Friday at 3pm. We'll be discussing changes to the Algebra 2 curriculum...
-                </p>
-              </div>
-              
-              <div class="p-4 cursor-pointer bg-primary/5 border-l-2 border-primary hover:bg-accent">
-                <div class="flex justify-between items-start mb-1">
-                  <h4 class="font-medium text-sm flex items-center">
-                    <span class="h-2 w-2 rounded-full bg-primary mr-2"></span>
-                    Kevin Thomas's Parent
-                  </h4>
-                  <span class="text-xs text-muted-foreground">Mar 22</span>
-                </div>
-                <h5 class="text-sm font-medium mb-1">Grades Concern</h5>
-                <p class="text-xs text-muted-foreground line-clamp-2">
-                  Good afternoon Ms. Wilson, I'm concerned about Kevin's recent test scores in your class. I'd like to discuss what we can do...
-                </p>
-              </div>
-              
-              <div class="p-4 cursor-pointer hover:bg-accent">
-                <div class="flex justify-between items-start mb-1">
-                  <h4 class="font-medium text-sm">Ryan Miller</h4>
-                  <span class="text-xs text-muted-foreground">Mar 21</span>
-                </div>
-                <h5 class="text-sm font-medium mb-1">Homework Question</h5>
-                <p class="text-xs text-muted-foreground line-clamp-2">
-                  Hi Ms. Wilson, I'm stuck on problem #7 from yesterday's homework. Could you please explain how to solve for the variable when...
-                </p>
-              </div>
-              
-              <div class="p-4 cursor-pointer hover:bg-accent">
-                <div class="flex justify-between items-start mb-1">
-                  <h4 class="font-medium text-sm">School Administration</h4>
-                  <span class="text-xs text-muted-foreground">Mar 20</span>
-                </div>
-                <h5 class="text-sm font-medium mb-1">Professional Development Day</h5>
-                <p class="text-xs text-muted-foreground line-clamp-2">
-                  Please note that April 15th will be a professional development day. All teachers are required to attend the workshops...
-                </p>
               </div>
             </div>
           </CardContent>
-          <div class="border-t p-3 flex justify-between items-center">
-            <div class="text-sm text-muted-foreground">
-              7 of 42 messages
-            </div>
-            <div class="flex space-x-1">
-              <Button variant="ghost" size="icon" class="h-8 w-8" disabled>
-                <Icon name="lucide:chevron-left" class="h-4 w-4" />
-              </Button>
-              <Button variant="ghost" size="icon" class="h-8 w-8">
-                <Icon name="lucide:chevron-right" class="h-4 w-4" />
-              </Button>
-            </div>
-          </div>
         </Card>
       </div>
       
       <!-- Message Content -->
-      <div class="md:col-span-7 lg:col-span-8">
-        <Card class="shadow-sm h-full flex flex-col">
-          <CardHeader class="px-6 py-4 border-b flex-none">
-            <div class="flex justify-between items-start">
+      <div class="lg:col-span-8">
+        <Card class="h-full flex flex-col">
+          <CardHeader class="flex-shrink-0 pb-3">
+            <div class="flex items-center">
+              <Avatar class="h-10 w-10 mr-3">
+                <AvatarImage :src="activeConversation?.avatar" />
+                <AvatarFallback>{{ activeConversation ? getInitials(activeConversation.name) : 'NA' }}</AvatarFallback>
+              </Avatar>
               <div>
-                <div class="flex items-center gap-3 mb-0.5">
-                  <Avatar class="h-9 w-9">
-                    <AvatarImage src="https://i.pravatar.cc/150?img=4" />
-                    <AvatarFallback>PA</AvatarFallback>
-                  </Avatar>
-                  <div>
-                    <CardTitle class="text-base">Principal Anderson</CardTitle>
-                    <p class="text-xs text-muted-foreground">To: All Teaching Staff</p>
-                  </div>
-                </div>
-                <div class="ml-12">
-                  <h3 class="text-lg font-medium">Staff Meeting Reminder</h3>
-                  <p class="text-xs text-muted-foreground">Today at 12:45 PM</p>
-                </div>
+                <CardTitle>{{ activeConversation?.name || 'Select a conversation' }}</CardTitle>
+                <CardDescription>{{ activeConversation?.role || '' }}</CardDescription>
               </div>
-              <div class="flex space-x-2">
-                <Button variant="ghost" size="icon" class="h-8 w-8">
-                  <Icon name="lucide:reply" class="h-4 w-4" />
-                </Button>
-                <Button variant="ghost" size="icon" class="h-8 w-8">
-                  <Icon name="lucide:trash-2" class="h-4 w-4" />
-                </Button>
-                <Button variant="ghost" size="icon" class="h-8 w-8">
-                  <Icon name="lucide:more-horizontal" class="h-4 w-4" />
-                </Button>
-              </div>
-            </div>
-          </CardHeader>
-          <CardContent class="px-6 py-4 flex-grow overflow-auto">
-            <div class="prose max-w-none">
-              <p>Dear Teaching Staff,</p>
-              <p>Reminder that we have our monthly staff meeting tomorrow at 4pm in the library. Please bring your department reports and be prepared to discuss the following agenda items:</p>
-              <ol>
-                <li>End of term assessment planning</li>
-                <li>Upcoming parent-teacher conference week</li>
-                <li>New digital learning resources budget allocation</li>
-                <li>Professional development opportunities for summer</li>
-              </ol>
-              <p>If you have any additional items you'd like to add to the agenda, please let me know by the end of the day.</p>
-              <p>For those of you participating in the Math Olympiad next month, we'll have a separate 15-minute meeting immediately following the main staff meeting to go over logistics.</p>
-              <p>As always, coffee and light refreshments will be provided.</p>
-              <p>Thank you for your continued dedication to our students and school community.</p>
-              <p>Best regards,<br>Principal Anderson</p>
             </div>
             
-            <div class="border rounded-md p-3 mt-6 bg-muted/30">
-              <div class="flex items-center gap-2 mb-2">
-                <Icon name="lucide:paperclip" class="h-4 w-4 text-muted-foreground" />
-                <span class="text-sm font-medium">2 Attachments</span>
-              </div>
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-                <div class="flex items-center gap-3 p-3 bg-background rounded border">
-                  <div class="h-10 w-10 bg-primary/10 rounded flex items-center justify-center">
-                    <Icon name="lucide:file-text" class="h-5 w-5 text-primary" />
-                  </div>
-                  <div class="flex-grow min-w-0">
-                    <p class="text-sm font-medium truncate">Staff_Meeting_Agenda_March.pdf</p>
-                    <p class="text-xs text-muted-foreground">123 KB</p>
-                  </div>
-                  <Button variant="ghost" size="icon" class="h-8 w-8">
-                    <Icon name="lucide:download" class="h-4 w-4" />
-                  </Button>
+            <div v-if="activeConversation" class="flex gap-2 ml-auto">
+              <Button variant="ghost" size="icon">
+                <Icon name="lucide:phone" class="h-4 w-4" />
+              </Button>
+              <Button variant="ghost" size="icon">
+                <Icon name="lucide:video" class="h-4 w-4" />
+              </Button>
+              <Button variant="ghost" size="icon">
+                <Icon name="lucide:more-vertical" class="h-4 w-4" />
+              </Button>
+            </div>
+          </CardHeader>
+          
+          <CardContent class="flex-grow p-0 overflow-auto">
+            <div v-if="!activeConversation" class="h-full flex flex-col items-center justify-center p-6">
+              <div class="w-full max-w-md text-center">
+                <div class="bg-accent rounded-full p-3 inline-flex mb-4">
+                  <Icon name="lucide:mail" class="h-6 w-6 text-muted-foreground" />
                 </div>
-                <div class="flex items-center gap-3 p-3 bg-background rounded border">
-                  <div class="h-10 w-10 bg-primary/10 rounded flex items-center justify-center">
-                    <Icon name="lucide:file-spreadsheet" class="h-5 w-5 text-primary" />
+                <h3 class="text-lg font-medium mb-2">Your Messages</h3>
+                <p class="text-muted-foreground mb-4">
+                  Select a conversation from the sidebar to view messages or start a new conversation
+                </p>
+                <Button>
+                  <Icon name="lucide:plus" class="h-4 w-4 mr-2" />
+                  New Message
+                </Button>
+              </div>
+            </div>
+            
+            <div v-else class="flex flex-col h-[calc(100vh-23rem)]">
+              <div class="flex-grow overflow-auto p-4 space-y-4">
+                <div 
+                  v-for="(message, index) in activeMessages" 
+                  :key="index" 
+                  :class="[
+                    'flex',
+                    message.sender === 'user' ? 'justify-end' : ''
+                  ]"
+                >
+                  <div 
+                    :class="[
+                      'max-w-[75%] rounded-lg p-3',
+                      message.sender === 'user' ? 'bg-primary text-primary-foreground' : 'bg-accent'
+                    ]"
+                  >
+                    <p class="text-sm">{{ message.content }}</p>
+                    <p class="text-xs mt-1 opacity-80 text-right">{{ message.time }}</p>
                   </div>
-                  <div class="flex-grow min-w-0">
-                    <p class="text-sm font-medium truncate">Department_Report_Template.xlsx</p>
-                    <p class="text-xs text-muted-foreground">85 KB</p>
+                </div>
+              </div>
+              
+              <div class="p-4 border-t">
+                <div class="flex gap-2">
+                  <Button variant="outline" size="icon">
+                    <Icon name="lucide:paperclip" class="h-4 w-4" />
+                  </Button>
+                  <div class="relative flex-grow">
+                    <Textarea placeholder="Type your message here..." rows="1" class="resize-none min-h-10 py-2.5 pr-10" />
+                    <Button variant="ghost" size="icon" class="absolute right-2 top-1/2 transform -translate-y-1/2">
+                      <Icon name="lucide:smile" class="h-4 w-4" />
+                    </Button>
                   </div>
-                  <Button variant="ghost" size="icon" class="h-8 w-8">
-                    <Icon name="lucide:download" class="h-4 w-4" />
+                  <Button>
+                    <Icon name="lucide:send" class="h-4 w-4" />
                   </Button>
                 </div>
               </div>
             </div>
           </CardContent>
-          <div class="border-t p-4 flex-none">
-            <div class="border rounded-md overflow-hidden">
-              <div class="border-b p-3 bg-muted/30 flex justify-between items-center">
-                <div class="text-sm font-medium">Reply to Principal Anderson</div>
-                <div class="flex space-x-1">
-                  <Button variant="ghost" size="icon" class="h-7 w-7">
-                    <Icon name="lucide:paperclip" class="h-4 w-4" />
-                  </Button>
-                  <Button variant="ghost" size="icon" class="h-7 w-7">
-                    <Icon name="lucide:smile" class="h-4 w-4" />
-                  </Button>
-                </div>
-              </div>
-              <div class="p-3">
-                <textarea 
-                  class="w-full border-0 focus:ring-0 resize-none min-h-[100px] p-0 placeholder:text-muted-foreground text-sm"
-                  placeholder="Type your message here..."
-                ></textarea>
-              </div>
-            </div>
-            <div class="flex justify-end mt-3">
-              <Button variant="outline" class="mr-2">
-                Save Draft
-              </Button>
-              <Button>
-                <Icon name="lucide:send" class="mr-2 h-4 w-4" />
-                Send
-              </Button>
-            </div>
-          </div>
         </Card>
       </div>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+      <Card>
+        <CardHeader>
+          <CardTitle>Announcements</CardTitle>
+          <CardDescription>School-wide announcements and notifications</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <div class="space-y-4">
+            <div v-for="(announcement, index) in announcements" :key="index" class="border-b pb-4 last:border-0 last:pb-0">
+              <div class="flex justify-between items-start mb-1">
+                <h4 class="font-medium">{{ announcement.title }}</h4>
+                <Badge variant="outline">{{ announcement.category }}</Badge>
+              </div>
+              <p class="text-sm text-muted-foreground mb-2">{{ announcement.content }}</p>
+              <div class="flex justify-between items-center text-xs text-muted-foreground">
+                <span>{{ announcement.date }} • {{ announcement.sender }}</span>
+                <Button variant="ghost" size="sm" class="h-auto py-1 px-2">Read More</Button>
+              </div>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+      
+      <Card>
+        <CardHeader>
+          <CardTitle>Class Communication</CardTitle>
+          <CardDescription>Send messages to your classes or individual students</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <div class="space-y-3">
+            <div 
+              v-for="(classGroup, index) in classes" 
+              :key="index" 
+              class="flex items-center p-2 rounded-md hover:bg-accent"
+            >
+              <div class="h-10 w-10 mr-3 flex items-center justify-center bg-primary/10 rounded-full">
+                <Icon :name="classGroup.icon" class="h-5 w-5 text-primary" />
+              </div>
+              <div class="flex-grow">
+                <h4 class="font-medium">{{ classGroup.name }}</h4>
+                <p class="text-sm text-muted-foreground">{{ classGroup.students }} students</p>
+              </div>
+              <Button variant="outline" size="sm">Message</Button>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
     </div>
   </div>
 </template>
 
 <script setup>
-import { Card, CardHeader, CardTitle, CardContent, CardFooter } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
+import { ref, computed } from 'vue';
+import { 
+  Card, 
+  CardHeader, 
+  CardTitle, 
+  CardDescription, 
+  CardContent 
+} from '@/components/ui/card';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+
+const selectedConversation = ref(null);
+
+const conversations = ref([
+  {
+    name: 'Martha Wilson',
+    role: 'Parent of Alex Wilson',
+    avatar: '/avatars/parent1.png',
+    lastMessage: 'Could we schedule a meeting to discuss Alex\'s progress?',
+    time: '10:32 AM',
+    unread: 1
+  },
+  {
+    name: 'Robert Johnson',
+    role: 'Parent of Emma Johnson',
+    avatar: '/avatars/parent2.png',
+    lastMessage: 'Thank you for the update on Emma\'s project.',
+    time: 'Yesterday',
+    unread: null
+  },
+  {
+    name: 'Jesscia Brown',
+    role: 'Student',
+    avatar: '/avatars/student1.png',
+    lastMessage: 'I submitted my assignment late. Will there be a penalty?',
+    time: 'Yesterday',
+    unread: 1
+  },
+  {
+    name: 'Principal Diaz',
+    role: 'Administrator',
+    avatar: '/avatars/admin1.png',
+    lastMessage: 'Please submit your field trip proposal by Friday.',
+    time: 'Mar 20',
+    unread: null
+  },
+  {
+    name: 'Michael Taylor',
+    role: 'Science Teacher',
+    avatar: '/avatars/teacher1.png',
+    lastMessage: 'Can we coordinate our lessons on ecosystems next week?',
+    time: 'Mar 19',
+    unread: null
+  }
+]);
+
+const activeConversation = computed(() => {
+  if (selectedConversation.value !== null) {
+    return conversations.value[selectedConversation.value];
+  }
+  return null;
+});
+
+const activeMessages = ref([
+  { 
+    sender: 'other', 
+    content: 'Hello, I wanted to discuss Alex\'s recent test results. He\'s been struggling with the new math concepts.',
+    time: '10:15 AM' 
+  },
+  { 
+    sender: 'user', 
+    content: 'I\'ve noticed that as well. I\'ve been providing additional resources, but he might benefit from some extra help.',
+    time: '10:18 AM' 
+  },
+  { 
+    sender: 'other', 
+    content: 'Would it be possible to set up a meeting to discuss strategies to help him improve?',
+    time: '10:25 AM' 
+  },
+  { 
+    sender: 'user', 
+    content: 'Absolutely. I\'m available after school on Thursday or Friday this week. Would either of those work for you?',
+    time: '10:30 AM' 
+  },
+  { 
+    sender: 'other', 
+    content: 'Friday would be perfect. Around 3:30 PM?',
+    time: '10:32 AM' 
+  }
+]);
+
+const announcements = [
+  {
+    title: 'Spring Break Schedule',
+    category: 'Calendar',
+    content: 'Spring break will be from April 3-10. Classes resume on Monday, April 11. We hope everyone has a safe and enjoyable break!',
+    date: 'Mar 20, 2025',
+    sender: 'Administration'
+  },
+  {
+    title: 'Professional Development Day',
+    category: 'Staff',
+    content: 'The upcoming professional development day will focus on innovative teaching methods. Please submit your workshop preferences by Friday.',
+    date: 'Mar 18, 2025',
+    sender: 'Principal Diaz'
+  },
+  {
+    title: 'Quarterly Grades Due',
+    category: 'Academic',
+    content: 'All quarter grades must be submitted by 5pm this Friday. Please ensure all assignments are graded and entered promptly.',
+    date: 'Mar 15, 2025',
+    sender: 'Administration'
+  }
+];
+
+const classes = [
+  {
+    name: 'Algebra I - Period 2',
+    students: 28,
+    icon: 'lucide:calculator'
+  },
+  {
+    name: 'Geometry - Period 3',
+    students: 24,
+    icon: 'lucide:triangle'
+  },
+  {
+    name: 'Pre-Calculus - Period 5',
+    students: 22,
+    icon: 'lucide:function-square'
+  },
+  {
+    name: 'Math Club',
+    students: 16,
+    icon: 'lucide:sigma'
+  }
+];
+
+function selectConversation(index) {
+  selectedConversation.value = index;
+  if (conversations.value[index].unread) {
+    conversations.value[index].unread = null;
+  }
+}
+
+function getInitials(name) {
+  return name.split(' ').map(word => word[0]).join('');
+}
 
 definePageMeta({
   layout: 'teacher'

@@ -12,10 +12,10 @@
           type="text"
           placeholder="Search books, journals, articles..."
           class="pl-10 pr-4 py-2 text-sm border rounded-md w-full focus:outline-none focus:ring-2 focus:ring-primary"
-        />
+        >
       </div>
       <div class="flex items-center space-x-2">
-        <Select defaultValue="all">
+        <Select default-value="all">
           <SelectTrigger class="w-[150px]">
             <SelectValue placeholder="Resource Type" />
           </SelectTrigger>
@@ -27,7 +27,7 @@
             <SelectItem value="references">References</SelectItem>
           </SelectContent>
         </Select>
-        <Select defaultValue="all">
+        <Select default-value="all">
           <SelectTrigger class="w-[150px]">
             <SelectValue placeholder="Subject" />
           </SelectTrigger>
@@ -52,7 +52,7 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
           <div v-for="(book, index) in featuredBooks" :key="index" class="flex flex-col">
             <div class="aspect-[2/3] bg-muted rounded-md overflow-hidden mb-2">
-              <img :src="book.cover" :alt="book.title" class="w-full h-full object-cover" />
+              <img :src="book.cover" :alt="book.title" class="w-full h-full object-cover" >
             </div>
             <h3 class="font-medium text-sm line-clamp-1">{{ book.title }}</h3>
             <p class="text-xs text-muted-foreground">{{ book.author }}</p>
@@ -104,7 +104,7 @@
             <CardTitle>Browse All Resources</CardTitle>
             <CardDescription>Access our complete digital collection</CardDescription>
           </div>
-          <Select defaultValue="newest">
+          <Select default-value="newest">
             <SelectTrigger class="w-[150px]">
               <SelectValue placeholder="Sort by" />
             </SelectTrigger>
@@ -120,7 +120,7 @@
         <div class="grid gap-4">
           <div v-for="(resource, index) in allResources" :key="index" class="flex items-start border rounded-lg p-4">
             <div class="h-16 w-12 bg-muted rounded overflow-hidden mr-4 hidden sm:block">
-              <img :src="resource.thumbnail" :alt="resource.title" class="w-full h-full object-cover" />
+              <img :src="resource.thumbnail" :alt="resource.title" class="w-full h-full object-cover" >
             </div>
             <div class="flex-grow">
               <div class="flex items-start justify-between mb-1">

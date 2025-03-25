@@ -1,5 +1,10 @@
 <template>
   <div>
+    <div class="mb-8">
+      <h1 class="text-3xl font-bold mb-2">Classes</h1>
+      <p class="text-muted-foreground">Manage your class rosters, schedules, and student information</p>
+    </div>
+    
     <Card class="shadow-sm mb-6">
       <CardHeader>
         <div class="flex justify-between items-center">

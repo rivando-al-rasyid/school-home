@@ -1,5 +1,10 @@
 <template>
   <div>
+    <div class="mb-8">
+      <h1 class="text-3xl font-bold mb-2">Resources</h1>
+      <p class="text-muted-foreground">Access and manage teaching materials, lesson plans, and educational content</p>
+    </div>
+    
     <!-- Main Content -->
     <div class="flex flex-col md:flex-row justify-between gap-4 items-center mb-6">
       <div class="flex items-center w-full md:w-auto">

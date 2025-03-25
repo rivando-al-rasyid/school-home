@@ -12,10 +12,10 @@
           type="text"
           placeholder="Search study groups..."
           class="pl-10 pr-4 py-2 text-sm border rounded-md w-full focus:outline-none focus:ring-2 focus:ring-primary"
-        />
+        >
       </div>
       <div class="flex items-center space-x-2">
-        <Select defaultValue="all">
+        <Select default-value="all">
           <SelectTrigger class="w-[150px]">
             <SelectValue placeholder="Subject" />
           </SelectTrigger>
@@ -27,7 +27,7 @@
             <SelectItem value="history">History</SelectItem>
           </SelectContent>
         </Select>
-        <Select defaultValue="all">
+        <Select default-value="all">
           <SelectTrigger class="w-[150px]">
             <SelectValue placeholder="Status" />
           </SelectTrigger>
@@ -172,7 +172,7 @@
             </div>
             <div class="space-y-2">
               <Label for="group-subject">Subject</Label>
-              <Select defaultValue="math">
+              <Select default-value="math">
                 <SelectTrigger id="group-subject">
                   <SelectValue placeholder="Select a subject" />
                 </SelectTrigger>
@@ -193,7 +193,7 @@
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div class="space-y-2">
               <Label for="group-schedule">Meeting Schedule</Label>
-              <Select defaultValue="weekly">
+              <Select default-value="weekly">
                 <SelectTrigger id="group-schedule">
                   <SelectValue placeholder="Select a schedule" />
                 </SelectTrigger>
@@ -207,7 +207,7 @@
             </div>
             <div class="space-y-2">
               <Label for="group-size">Maximum Size</Label>
-              <Select defaultValue="8">
+              <Select default-value="8">
                 <SelectTrigger id="group-size">
                   <SelectValue placeholder="Select group size" />
                 </SelectTrigger>

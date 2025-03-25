@@ -1,7 +1,9 @@
 <template>
-    <div class="container mx-auto py-8 px-4">
-    <h1 class="text-3xl font-bold mb-2">Assignments</h1>
-    <p class="text-muted-foreground mb-6">Manage assignments and submissions</p>
+  <div>
+    <div class="mb-8">
+      <h1 class="text-3xl font-bold mb-2">Assignments</h1>
+      <p class="text-muted-foreground">Manage assignments and submissions</p>
+    </div>
 
     <div class="flex justify-between items-center mb-6">
       <div>
@@ -73,7 +75,7 @@
                 <th class="py-3 px-4 text-left font-medium">Due Date</th>
                 <th class="py-3 px-4 text-left font-medium">Submissions</th>
                 <th class="py-3 px-4 text-left font-medium">Status</th>
-                <th class="py-3 px-4 text-left font-medium"></th>
+                <th class="py-3 px-4 text-left font-medium"/>
               </tr>
             </thead>
             <tbody>

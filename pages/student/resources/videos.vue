@@ -12,10 +12,10 @@
           type="text"
           placeholder="Search tutorials..."
           class="pl-10 pr-4 py-2 text-sm border rounded-md w-full focus:outline-none focus:ring-2 focus:ring-primary"
-        />
+        >
       </div>
       <div class="flex items-center space-x-2">
-        <Select defaultValue="all">
+        <Select default-value="all">
           <SelectTrigger class="w-[150px]">
             <SelectValue placeholder="Subject" />
           </SelectTrigger>
@@ -27,7 +27,7 @@
             <SelectItem value="history">History</SelectItem>
           </SelectContent>
         </Select>
-        <Select defaultValue="all">
+        <Select default-value="all">
           <SelectTrigger class="w-[150px]">
             <SelectValue placeholder="Duration" />
           </SelectTrigger>
@@ -51,7 +51,7 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           <div v-for="(video, index) in featuredVideos" :key="index" class="flex flex-col">
             <div class="aspect-video bg-muted rounded-md overflow-hidden mb-2 relative group">
-              <img :src="video.thumbnail" :alt="video.title" class="w-full h-full object-cover" />
+              <img :src="video.thumbnail" :alt="video.title" class="w-full h-full object-cover" >
               <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                 <Button variant="ghost" class="text-white">
                   <Icon name="lucide:play" class="h-12 w-12" />
@@ -80,7 +80,7 @@
         <div class="grid grid-cols-1 gap-4">
           <div v-for="(video, index) in recommendedVideos" :key="index" class="flex items-start border rounded-lg p-3">
             <div class="h-20 w-36 bg-muted rounded overflow-hidden mr-3 relative flex-shrink-0">
-              <img :src="video.thumbnail" :alt="video.title" class="w-full h-full object-cover" />
+              <img :src="video.thumbnail" :alt="video.title" class="w-full h-full object-cover" >
               <Badge class="absolute bottom-1 right-1 bg-black bg-opacity-75 text-white text-xs">{{ video.duration }}</Badge>
             </div>
             <div class="flex-grow">
@@ -182,7 +182,7 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           <div v-for="(video, index) in latestVideos" :key="index" class="flex flex-col">
             <div class="aspect-video bg-muted rounded-md overflow-hidden mb-2 relative group">
-              <img :src="video.thumbnail" :alt="video.title" class="w-full h-full object-cover" />
+              <img :src="video.thumbnail" :alt="video.title" class="w-full h-full object-cover" >
               <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                 <Button variant="ghost" class="text-white">
                   <Icon name="lucide:play" class="h-8 w-8" />

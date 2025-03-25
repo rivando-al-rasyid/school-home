@@ -1,5 +1,10 @@
 <template>
   <div>
+    <div class="mb-8">
+      <h1 class="text-3xl font-bold mb-2">Grades</h1>
+      <p class="text-muted-foreground">View and manage student grades, assignments, and academic performance</p>
+    </div>
+
     <div class="flex justify-between items-center mb-6">
       <div class="flex items-center space-x-4">
         <select class="pr-10 pl-3 py-2 rounded-md border text-sm appearance-none focus:ring-2 focus:ring-primary focus:outline-none">
@@ -89,13 +94,13 @@
             <thead>
               <tr class="border-b">
                 <th class="py-3 px-4 text-left font-medium sticky left-0 bg-background">Student</th>
-                <th class="py-3 px-4 text-center font-medium">HW #6<br/><span class="font-normal text-xs">10 pts</span></th>
-                <th class="py-3 px-4 text-center font-medium">HW #7<br/><span class="font-normal text-xs">10 pts</span></th>
-                <th class="py-3 px-4 text-center font-medium">Quiz #3<br/><span class="font-normal text-xs">20 pts</span></th>
-                <th class="py-3 px-4 text-center font-medium">Quiz #4<br/><span class="font-normal text-xs">20 pts</span></th>
-                <th class="py-3 px-4 text-center font-medium">Project<br/><span class="font-normal text-xs">50 pts</span></th>
-                <th class="py-3 px-4 text-center font-medium">Midterm<br/><span class="font-normal text-xs">100 pts</span></th>
-                <th class="py-3 px-4 text-center font-medium">Overall<br/><span class="font-normal text-xs">Grade</span></th>
+                <th class="py-3 px-4 text-center font-medium">HW #6<br><span class="font-normal text-xs">10 pts</span></th>
+                <th class="py-3 px-4 text-center font-medium">HW #7<br><span class="font-normal text-xs">10 pts</span></th>
+                <th class="py-3 px-4 text-center font-medium">Quiz #3<br><span class="font-normal text-xs">20 pts</span></th>
+                <th class="py-3 px-4 text-center font-medium">Quiz #4<br><span class="font-normal text-xs">20 pts</span></th>
+                <th class="py-3 px-4 text-center font-medium">Project<br><span class="font-normal text-xs">50 pts</span></th>
+                <th class="py-3 px-4 text-center font-medium">Midterm<br><span class="font-normal text-xs">100 pts</span></th>
+                <th class="py-3 px-4 text-center font-medium">Overall<br><span class="font-normal text-xs">Grade</span></th>
               </tr>
             </thead>
             <tbody>
@@ -226,7 +231,7 @@
                   <span class="text-sm font-medium">85%</span>
                 </div>
                 <div class="w-full bg-muted h-2 rounded-full">
-                  <div class="bg-success h-2 rounded-full" style="width: 85%"></div>
+                  <div class="bg-success h-2 rounded-full" style="width: 85%"/>
                 </div>
               </div>
               <div>
@@ -235,7 +240,7 @@
                   <span class="text-sm font-medium">83%</span>
                 </div>
                 <div class="w-full bg-muted h-2 rounded-full">
-                  <div class="bg-success h-2 rounded-full" style="width: 83%"></div>
+                  <div class="bg-success h-2 rounded-full" style="width: 83%"/>
                 </div>
               </div>
               <div>
@@ -244,7 +249,7 @@
                   <span class="text-sm font-medium">78%</span>
                 </div>
                 <div class="w-full bg-muted h-2 rounded-full">
-                  <div class="bg-primary h-2 rounded-full" style="width: 78%"></div>
+                  <div class="bg-primary h-2 rounded-full" style="width: 78%"/>
                 </div>
               </div>
               <div>
@@ -253,7 +258,7 @@
                   <span class="text-sm font-medium">81%</span>
                 </div>
                 <div class="w-full bg-muted h-2 rounded-full">
-                  <div class="bg-primary h-2 rounded-full" style="width: 81%"></div>
+                  <div class="bg-primary h-2 rounded-full" style="width: 81%"/>
                 </div>
               </div>
               <div>
@@ -262,7 +267,7 @@
                   <span class="text-sm font-medium">89%</span>
                 </div>
                 <div class="w-full bg-muted h-2 rounded-full">
-                  <div class="bg-success h-2 rounded-full" style="width: 89%"></div>
+                  <div class="bg-success h-2 rounded-full" style="width: 89%"/>
                 </div>
               </div>
               <div>
@@ -271,7 +276,7 @@
                   <span class="text-sm font-medium">79%</span>
                 </div>
                 <div class="w-full bg-muted h-2 rounded-full">
-                  <div class="bg-primary h-2 rounded-full" style="width: 79%"></div>
+                  <div class="bg-primary h-2 rounded-full" style="width: 79%"/>
                 </div>
               </div>
             </div>

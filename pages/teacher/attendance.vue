@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto py-8 px-4">
+  <div>
     <div class="mb-8">
       <h1 class="text-3xl font-bold mb-2">Attendance</h1>
       <p class="text-muted-foreground">Track and manage student attendance for all your classes</p>
@@ -23,7 +23,7 @@
                 type="date" 
                 value="2025-03-25"
                 class="pr-10 pl-3 py-2 rounded-md border text-sm appearance-none focus:ring-2 focus:ring-primary focus:outline-none" 
-              />
+              >
             </div>
           </div>
           
@@ -155,7 +155,7 @@
                       </select>
                     </td>
                     <td class="py-3 px-4">
-                      <input type="text" class="w-full text-sm p-1 border rounded-md" value="Bus delay - 15 minutes late" />
+                      <input type="text" class="w-full text-sm p-1 border rounded-md" value="Bus delay - 15 minutes late" >
                     </td>
                     <td class="py-3 px-4 text-center">
                       <Button variant="ghost" size="icon" class="h-8 w-8">
@@ -182,7 +182,7 @@
                       </select>
                     </td>
                     <td class="py-3 px-4">
-                      <input type="text" class="w-full text-sm p-1 border rounded-md" placeholder="Add notes..." />
+                      <input type="text" class="w-full text-sm p-1 border rounded-md" placeholder="Add notes..." >
                     </td>
                     <td class="py-3 px-4 text-center">
                       <Button variant="ghost" size="icon" class="h-8 w-8">
@@ -209,7 +209,7 @@
                       </select>
                     </td>
                     <td class="py-3 px-4">
-                      <input type="text" class="w-full text-sm p-1 border rounded-md" placeholder="Add notes..." />
+                      <input type="text" class="w-full text-sm p-1 border rounded-md" placeholder="Add notes..." >
                     </td>
                     <td class="py-3 px-4 text-center">
                       <Button variant="ghost" size="icon" class="h-8 w-8">
@@ -236,7 +236,7 @@
                       </select>
                     </td>
                     <td class="py-3 px-4">
-                      <input type="text" class="w-full text-sm p-1 border rounded-md" placeholder="Add notes..." />
+                      <input type="text" class="w-full text-sm p-1 border rounded-md" placeholder="Add notes..." >
                     </td>
                     <td class="py-3 px-4 text-center">
                       <Button variant="ghost" size="icon" class="h-8 w-8">
@@ -291,7 +291,8 @@
                       <span class="text-sm">Emily B.</span>
                     </div>
                     <div v-for="day in 31" :key="day" class="flex items-center justify-center">
-                      <div v-if="day <= 25" class="h-4 w-4 rounded-full" :class="{
+                      <div
+v-if="day <= 25" class="h-4 w-4 rounded-full" :class="{
                         'bg-success': day !== 12,
                         'bg-warning': day === 12
                       }" />
@@ -307,7 +308,8 @@
                       <span class="text-sm">Thomas W.</span>
                     </div>
                     <div v-for="day in 31" :key="day" class="flex items-center justify-center">
-                      <div v-if="day <= 25" class="h-4 w-4 rounded-full" :class="{
+                      <div
+v-if="day <= 25" class="h-4 w-4 rounded-full" :class="{
                         'bg-success': day !== 8 && day !== 15 && day !== 22 && day !== 25,
                         'bg-warning': day === 15 || day === 25,
                         'bg-destructive': day === 8 || day === 22
@@ -324,7 +326,8 @@
                       <span class="text-sm">Jessica D.</span>
                     </div>
                     <div v-for="day in 31" :key="day" class="flex items-center justify-center">
-                      <div v-if="day <= 25" class="h-4 w-4 rounded-full" :class="{
+                      <div
+v-if="day <= 25" class="h-4 w-4 rounded-full" :class="{
                         'bg-success': day !== 10,
                         'bg-blue-500': day === 10
                       }" />

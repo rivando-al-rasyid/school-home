@@ -12,10 +12,10 @@
           type="text"
           placeholder="Search quizzes..."
           class="pl-10 pr-4 py-2 text-sm border rounded-md w-full focus:outline-none focus:ring-2 focus:ring-primary"
-        />
+        >
       </div>
       <div class="flex items-center space-x-2">
-        <Select defaultValue="all">
+        <Select default-value="all">
           <SelectTrigger class="w-[150px]">
             <SelectValue placeholder="Subject" />
           </SelectTrigger>
@@ -27,7 +27,7 @@
             <SelectItem value="history">History</SelectItem>
           </SelectContent>
         </Select>
-        <Select defaultValue="all">
+        <Select default-value="all">
           <SelectTrigger class="w-[150px]">
             <SelectValue placeholder="Difficulty" />
           </SelectTrigger>
@@ -43,8 +43,8 @@
     
     <!-- Quiz Stats -->
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-      <Card className="bg-primary/5">
-        <CardContent className="p-6">
+      <Card class-name="bg-primary/5">
+        <CardContent class-name="p-6">
           <div class="flex items-center space-x-4">
             <div class="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center">
               <Icon name="lucide:check-circle" class="h-6 w-6 text-primary" />
@@ -56,8 +56,8 @@
           </div>
         </CardContent>
       </Card>
-      <Card className="bg-primary/5">
-        <CardContent className="p-6">
+      <Card class-name="bg-primary/5">
+        <CardContent class-name="p-6">
           <div class="flex items-center space-x-4">
             <div class="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center">
               <Icon name="lucide:bar-chart" class="h-6 w-6 text-primary" />
@@ -69,8 +69,8 @@
           </div>
         </CardContent>
       </Card>
-      <Card className="bg-primary/5">
-        <CardContent className="p-6">
+      <Card class-name="bg-primary/5">
+        <CardContent class-name="p-6">
           <div class="flex items-center space-x-4">
             <div class="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center">
               <Icon name="lucide:thumbs-up" class="h-6 w-6 text-primary" />
@@ -82,8 +82,8 @@
           </div>
         </CardContent>
       </Card>
-      <Card className="bg-primary/5">
-        <CardContent className="p-6">
+      <Card class-name="bg-primary/5">
+        <CardContent class-name="p-6">
           <div class="flex items-center space-x-4">
             <div class="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center">
               <Icon name="lucide:flame" class="h-6 w-6 text-primary" />
@@ -138,7 +138,7 @@
         <CardDescription>Focus on specific areas to improve your skills</CardDescription>
       </CardHeader>
       <CardContent>
-        <Tabs defaultValue="math" class="w-full">
+        <Tabs default-value="math" class="w-full">
           <TabsList class="grid grid-cols-4 w-full">
             <TabsTrigger value="math">Mathematics</TabsTrigger>
             <TabsTrigger value="science">Science</TabsTrigger>
@@ -266,7 +266,7 @@
                 class="h-2 rounded-full" 
                 :class="getScoreVariant(result.score) === 'default' ? 'bg-primary' : getScoreVariant(result.score) === 'secondary' ? 'bg-amber-500' : 'bg-red-500'"
                 :style="{ width: `${result.score}%` }"
-              ></div>
+              />
             </div>
             <div class="flex flex-wrap items-center gap-2 mb-3">
               <div v-for="(stat, statIndex) in result.stats" :key="statIndex" class="flex items-center text-xs text-muted-foreground">
