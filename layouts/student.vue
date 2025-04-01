@@ -46,13 +46,11 @@
           <CardContent>
             <div class="space-y-4">
               <div v-for="(assignment, index) in upcomingAssignments" :key="index" class="flex justify-between items-start">
-                <div class="flex items-center justify-between">
-                  <div>
-                    <h4 class="font-medium text-sm">{{ assignment.title }}</h4>
-                    <p class="text-xs text-muted-foreground">Due in {{ assignment.dueIn }}</p>
-                  </div>
-                  <Badge :variant="assignment.priorityType as ('default' | 'secondary' | 'destructive' | 'outline')">{{ assignment.priority }}</Badge>
+                <div>
+                  <h4 class="font-medium text-sm">{{ assignment.title }}</h4>
+                  <p class="text-xs text-muted-foreground">Due in {{ assignment.dueIn }}</p>
                 </div>
+                <Badge :variant="assignment.priorityType">{{ assignment.priority }}</Badge>
               </div>
             </div>
           </CardContent>
@@ -86,19 +84,20 @@ const upcomingAssignments = [
     title: 'Math Assignment',
     dueIn: '2 days',
     priority: 'Urgent',
-    priorityType: 'destructive'
+    priorityType: 'destructive' as const
   },
   {
     title: 'Science Project',
     dueIn: '5 days',
     priority: 'Important',
-    priorityType: 'warning'
+    priorityType: 'secondary' as const
   },
   {
     title: 'English Essay',
     dueIn: '7 days',
     priority: 'Normal',
-    priorityType: 'default'
+    priorityType: 'default' as const
   }
 ];
+
 </script>
