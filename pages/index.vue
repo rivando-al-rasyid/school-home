@@ -1,5 +1,45 @@
+<script setup lang="ts">
+import Autoplay from 'embla-carousel-autoplay';
+
+const { data } = await useFetch('/events');
+const events = ref(data.value);
+
+// Hero section slides
+const slides = ref([
+  { id: 1, src: 'https://images.unsplash.com/photo-1562774053-701939374585', alt: 'School Building', caption: 'Our Modern Campus' },
+  { id: 2, src: 'https://images.unsplash.com/photo-1577896851231-70ef18881754', alt: 'Classroom', caption: 'Interactive Learning Environments' },
+  { id: 3, src: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1', alt: 'Students', caption: 'Empowering Student Success' }
+]);
+
+// Upcoming events
+
+
+// Latest news
+const news = ref([
+  {
+    id: 1,
+    title: 'New Curriculum Updates',
+    created_at: '2025-03-20',
+    description: 'Important changes to the math and science programs'
+  },
+  {
+    id: 2,
+    title: 'System Maintenance Notice',
+    created_at: '2025-03-18',
+    description: 'Scheduled downtime on Sunday from 2-4 AM'
+  },
+  {
+    id: 3,
+    title: 'New Mobile App Features',
+    created_at: '2025-03-15',
+    description: 'Updated interface with improved notifications'
+  }
+]);
+</script>
+
 <template>
   <div>
+    <pre>{{ events }}</pre>
     <!-- Hero Section with Carousel -->
     <section class="relative h-[600px] overflow-hidden">
       <Carousel
@@ -274,58 +314,3 @@
     </section>
   </div>
 </template>
-
-<script setup lang="ts">
-import Autoplay from 'embla-carousel-autoplay';
-
-// Hero section slides
-const slides = ref([
-  { id: 1, src: 'https://images.unsplash.com/photo-1562774053-701939374585', alt: 'School Building', caption: 'Our Modern Campus' },
-  { id: 2, src: 'https://images.unsplash.com/photo-1577896851231-70ef18881754', alt: 'Classroom', caption: 'Interactive Learning Environments' },
-  { id: 3, src: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1', alt: 'Students', caption: 'Empowering Student Success' }
-]);
-
-// Upcoming events
-const events = ref([
-  {
-    id: 1,
-    title: 'Parent-Teacher Conference',
-    date: '2025-04-15',
-    description: 'Discuss student progress and learning goals'
-  },
-  {
-    id: 2,
-    title: 'Annual Science Fair',
-    date: '2025-04-22',
-    description: 'Students showcase their scientific discoveries'
-  },
-  {
-    id: 3,
-    title: 'End of Term Exams',
-    date: '2025-05-05',
-    description: 'Final examinations for the spring semester'
-  }
-]);
-
-// Latest news
-const news = ref([
-  {
-    id: 1,
-    title: 'New Curriculum Updates',
-    created_at: '2025-03-20',
-    description: 'Important changes to the math and science programs'
-  },
-  {
-    id: 2,
-    title: 'System Maintenance Notice',
-    created_at: '2025-03-18',
-    description: 'Scheduled downtime on Sunday from 2-4 AM'
-  },
-  {
-    id: 3,
-    title: 'New Mobile App Features',
-    created_at: '2025-03-15',
-    description: 'Updated interface with improved notifications'
-  }
-]);
-</script>

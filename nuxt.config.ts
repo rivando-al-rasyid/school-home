@@ -3,14 +3,17 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
 
+  
   modules: [
     '@nuxtjs/tailwindcss',
     '@nuxt/eslint',
     '@nuxt/fonts',
     '@nuxt/icon',
     '@nuxt/image',
-    'shadcn-nuxt'
+    'shadcn-nuxt',
+    '@nuxthub/core'
   ],  
+  
   shadcn: {
     /**
      * Prefix for all the imported component
@@ -21,5 +24,9 @@ export default defineNuxtConfig({
      * @default "./components/ui"
      */
     componentDir: './components/ui'
-  }
+  },
+  hub: {
+    
+  },
+  
 })
