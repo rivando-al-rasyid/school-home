@@ -256,7 +256,7 @@
                 <p class="text-muted-foreground mb-4">Welcome back! Sign in to continue where you left off and access your dashboard.</p>
               </CardContent>
               <CardFooter>
-                <NuxtLink to="/pelajar" class="w-full">
+                <NuxtLink to="/login" class="w-full">
                   <Button variant="outline" class="w-full">Log In</Button>
                 </NuxtLink>
               </CardFooter>
